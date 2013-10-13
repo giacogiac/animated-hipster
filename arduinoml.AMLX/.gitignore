@@ -1,3 +1,2 @@
 /bin
-/src/*
-!/src/arduinoml/*
+/src/arduinoml/*/*
