@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/ArduinoML/src" modelPluginID="ArduinoML" modelName="ArduinoML"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="6.0" copyrightFields="false" operationReflection="true" importOrganizing="true">
+  <foreignModel>ArduinoML.ecore</foreignModel>
+  <genPackages prefix="Arduinoml" disposableProviderFactory="true" ecorePackage="ArduinoML.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="ArduinoML.ecore#//BrickState">
+      <genEnumLiterals ecoreEnumLiteral="ArduinoML.ecore#//BrickState/OFF"/>
+      <genEnumLiterals ecoreEnumLiteral="ArduinoML.ecore#//BrickState/ON"/>
+    </genEnums>
+    <genClasses ecoreClass="ArduinoML.ecore#//Machine">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ArduinoML.ecore#//Machine/bricks"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ArduinoML.ecore#//Machine/states"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ArduinoML.ecore#//Machine/start"/>
+    </genClasses>
+    <genClasses ecoreClass="ArduinoML.ecore#//State">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ArduinoML.ecore#//State/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ArduinoML.ecore#//State/transitions"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ArduinoML.ecore#//State/actions"/>
+    </genClasses>
+    <genClasses ecoreClass="ArduinoML.ecore#//Brick">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ArduinoML.ecore#//Brick/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ArduinoML.ecore#//Brick/pin"/>
+    </genClasses>
+    <genClasses ecoreClass="ArduinoML.ecore#//Sensor"/>
+    <genClasses ecoreClass="ArduinoML.ecore#//Actuator"/>
+    <genClasses ecoreClass="ArduinoML.ecore#//Transition">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ArduinoML.ecore#//Transition/goto"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ArduinoML.ecore#//Transition/conditions"/>
+    </genClasses>
+    <genClasses ecoreClass="ArduinoML.ecore#//Condition">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ArduinoML.ecore#//Condition/bState"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ArduinoML.ecore#//Condition/sensor"/>
+    </genClasses>
+    <genClasses ecoreClass="ArduinoML.ecore#//Action">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ArduinoML.ecore#//Action/bState"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ArduinoML.ecore#//Action/actuator"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated ArduinoML -->
+      <package
+            uri="http://arduinoml/1.0"
+            class="arduinoml.ArduinomlPackage"
+            genModel="model/ArduinoML.genmodel"/>
+   </extension>
+
+</plugin>

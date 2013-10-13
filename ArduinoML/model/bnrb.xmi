@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="ASCII"?>
+<arduinoml:Machine
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:arduinoml="http://arduinoml/1.0"
+    start="//@states.0">
+  <states Name="StateOFF">
+    <transitions
+        goto="//@states.1">
+      <conditions
+          sensor="//@bricks.0"/>
+    </transitions>
+    <actions
+        actuator="//@bricks.1"
+        BState="OFF"/>
+    <actions
+        actuator="//@bricks.2"
+        BState="OFF"/>
+  </states>
+  <states Name="StateON">
+    <transitions
+        goto="//@states.0">
+      <conditions
+          sensor="//@bricks.0"/>
+    </transitions>
+    <actions
+        actuator="//@bricks.1"/>
+    <actions
+        actuator="//@bricks.2"/>
+  </states>
+  <bricks xsi:type="arduinoml:Sensor"
+      Name="Button"
+      Pin="10"/>
+  <bricks xsi:type="arduinoml:Actuator"
+      Name="Buzzer"
+      Pin="11"/>
+  <bricks xsi:type="arduinoml:Actuator"
+      Name="RedLed"
+      Pin="12"/>
+</arduinoml:Machine>
