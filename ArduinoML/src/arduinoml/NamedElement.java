@@ -17,7 +17,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  *
  * @see arduinoml.ArduinomlPackage#getNamedElement()
- * @model
+ * @model abstract="true"
  * @generated
  */
 public interface NamedElement extends EObject {
@@ -32,7 +32,7 @@ public interface NamedElement extends EObject {
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
 	 * @see arduinoml.ArduinomlPackage#getNamedElement_Name()
-	 * @model required="true"
+	 * @model id="true" required="true"
 	 * @generated
 	 */
 	String getName();

@@ -8,11 +8,6 @@ import arduinoml.*;
 import arduinoml.util.ArduinomlSwitch;
 
 public class ToArduinoCode extends ArduinomlSwitch<String> {
-
-	@Override
-	public String caseBrick(Brick object) {
-		return null;
-	}
 	
 	@Override
 	public String caseSensor(Sensor object) {
@@ -86,16 +81,14 @@ public class ToArduinoCode extends ArduinomlSwitch<String> {
 		return sb.toString();
 	}
 
-	@Override
-	public String defaultCase(EObject object) {
-		return null;
-	}
-	
 	private String BStateToString(DigitalBrickState bs) {
-		if (bs == DigitalBrickState.ON)
+		switch (bs) {
+		case ON:
 			return "HIGH";
-		if (bs == DigitalBrickState.OFF)
+		case OFF:
 			return "LOW";
-		return null;
+		default:
+			return null;
+		}
 	}
 }

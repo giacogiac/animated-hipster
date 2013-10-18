@@ -179,7 +179,7 @@
     <element xmi:type="ecore:EClass" href="ArduinoML.ecore#//NamedElement"/>
     <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9JbQUjfwEeOoq-qz7ZEvMw" x="445" y="5"/>
   </children>
-  <children xmi:type="notation:Shape" xmi:id="_B8XI8DfzEeOoq-qz7ZEvMw" type="Note" fontName="Segoe UI" description="Text" fillColor="13369343" transparency="0" lineColor="6737151" lineWidth="1">
+  <children xmi:type="notation:Shape" xmi:id="_B8XI8DfzEeOoq-qz7ZEvMw" type="Note" fontName="Segoe UI" description="Toutes les conditions doivent etres remplies (&amp;&amp;)" fillColor="13369343" transparency="0" lineColor="6737151" lineWidth="1">
     <children xmi:type="notation:BasicDecorationNode" xmi:id="_B8dPkDfzEeOoq-qz7ZEvMw" type="DiagramName">
       <element xsi:nil="true"/>
     </children>
@@ -189,7 +189,7 @@
     <styles xmi:type="notation:TextStyle" xmi:id="_B8XI8TfzEeOoq-qz7ZEvMw"/>
     <styles xmi:type="notation:LineTypeStyle" xmi:id="_B8XI8jfzEeOoq-qz7ZEvMw"/>
     <element xsi:nil="true"/>
-    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_B8XI8zfzEeOoq-qz7ZEvMw" x="35" y="245"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_B8XI8zfzEeOoq-qz7ZEvMw" x="35" y="245" width="96" height="106"/>
   </children>
   <styles xmi:type="notation:DiagramStyle" xmi:id="_EOCHMTPuEeOWWpfQukJaBw"/>
   <element xmi:type="ecore:EPackage" href="ArduinoML.ecore#/"/>

@@ -59,13 +59,11 @@ public class ArduinomlFactoryImpl extends EFactoryImpl implements ArduinomlFacto
 		switch (eClass.getClassifierID()) {
 			case ArduinomlPackage.MACHINE: return createMachine();
 			case ArduinomlPackage.STATE: return createState();
-			case ArduinomlPackage.BRICK: return createBrick();
 			case ArduinomlPackage.SENSOR: return createSensor();
 			case ArduinomlPackage.ACTUATOR: return createActuator();
 			case ArduinomlPackage.TRANSITION: return createTransition();
 			case ArduinomlPackage.CONDITION: return createCondition();
 			case ArduinomlPackage.ACTION: return createAction();
-			case ArduinomlPackage.NAMED_ELEMENT: return createNamedElement();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -126,16 +124,6 @@ public class ArduinomlFactoryImpl extends EFactoryImpl implements ArduinomlFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Brick createBrick() {
-		BrickImpl brick = new BrickImpl();
-		return brick;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public Sensor createSensor() {
 		SensorImpl sensor = new SensorImpl();
 		return sensor;
@@ -179,16 +167,6 @@ public class ArduinomlFactoryImpl extends EFactoryImpl implements ArduinomlFacto
 	public Action createAction() {
 		ActionImpl action = new ActionImpl();
 		return action;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NamedElement createNamedElement() {
-		NamedElementImpl namedElement = new NamedElementImpl();
-		return namedElement;
 	}
 
 	/**

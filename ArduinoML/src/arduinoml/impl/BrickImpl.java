@@ -24,7 +24,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class BrickImpl extends NamedElementImpl implements Brick {
+public abstract class BrickImpl extends NamedElementImpl implements Brick {
 	/**
 	 * The default value of the '{@link #getPin() <em>Pin</em>}' attribute.
 	 * <!-- begin-user-doc -->

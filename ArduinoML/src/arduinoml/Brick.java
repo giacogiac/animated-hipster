@@ -16,7 +16,7 @@ package arduinoml;
  * </p>
  *
  * @see arduinoml.ArduinomlPackage#getBrick()
- * @model
+ * @model abstract="true"
  * @generated
  */
 public interface Brick extends NamedElement {

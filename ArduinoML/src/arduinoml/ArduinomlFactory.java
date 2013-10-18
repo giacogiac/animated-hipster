@@ -40,15 +40,6 @@ public interface ArduinomlFactory extends EFactory {
 	State createState();
 
 	/**
-	 * Returns a new object of class '<em>Brick</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Brick</em>'.
-	 * @generated
-	 */
-	Brick createBrick();
-
-	/**
 	 * Returns a new object of class '<em>Sensor</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -92,15 +83,6 @@ public interface ArduinomlFactory extends EFactory {
 	 * @generated
 	 */
 	Action createAction();
-
-	/**
-	 * Returns a new object of class '<em>Named Element</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Named Element</em>'.
-	 * @generated
-	 */
-	NamedElement createNamedElement();
 
 	/**
 	 * Returns the package supported by this factory.
