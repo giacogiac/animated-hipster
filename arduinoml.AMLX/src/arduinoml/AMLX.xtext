@@ -6,9 +6,9 @@ import "http://www.eclipse.org/emf/2002/Ecore" as ecore
 Machine returns Machine:
 	'Machine'
 	'{'
-		'start' start=[State|EString]
 		('bricks' '{' bricks+=Brick ( "," bricks+=Brick)* '}' )?
 		'states' '{' states+=State ( "," states+=State)* '}' 
+		'start' start=[State|EString]
 	'}';
 
 Brick returns Brick:
@@ -23,8 +23,8 @@ Brick_Impl returns Brick:
 
 State returns State:
 	'State'
+	name=EString
 	'{'
-		'Name' Name=EString
 		('transitions' '{' transitions+=Transition ( "," transitions+=Transition)* '}' )?
 		('actions' '{' actions+=Action ( "," actions+=Action)* '}' )?
 	'}';

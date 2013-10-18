@@ -4,3 +4,4 @@ Bundle-Name: Demo
 Bundle-SymbolicName: Demo; singleton:=true
 Bundle-Version: 0.1.0.qualifier
 Require-Bundle: org.eclipse.emf.ecore
+Import-Package: arduinoml

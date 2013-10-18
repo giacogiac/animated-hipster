@@ -3,8 +3,8 @@
 package arduinoml.impl;
 
 import arduinoml.ArduinomlPackage;
-import arduinoml.BrickState;
 import arduinoml.Condition;
+import arduinoml.DigitalBrickState;
 import arduinoml.Sensor;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -38,7 +38,7 @@ public class ConditionImpl extends MinimalEObjectImpl.Container implements Condi
 	 * @generated
 	 * @ordered
 	 */
-	protected static final BrickState BSTATE_EDEFAULT = BrickState.OFF;
+	protected static final DigitalBrickState BSTATE_EDEFAULT = DigitalBrickState.OFF;
 
 	/**
 	 * The cached value of the '{@link #getBState() <em>BState</em>}' attribute.
@@ -48,7 +48,7 @@ public class ConditionImpl extends MinimalEObjectImpl.Container implements Condi
 	 * @generated
 	 * @ordered
 	 */
-	protected BrickState bState = BSTATE_EDEFAULT;
+	protected DigitalBrickState bState = BSTATE_EDEFAULT;
 
 	/**
 	 * The cached value of the '{@link #getSensor() <em>Sensor</em>}' reference.
@@ -84,7 +84,7 @@ public class ConditionImpl extends MinimalEObjectImpl.Container implements Condi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public BrickState getBState() {
+	public DigitalBrickState getBState() {
 		return bState;
 	}
 
@@ -93,8 +93,8 @@ public class ConditionImpl extends MinimalEObjectImpl.Container implements Condi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setBState(BrickState newBState) {
-		BrickState oldBState = bState;
+	public void setBState(DigitalBrickState newBState) {
+		DigitalBrickState oldBState = bState;
 		bState = newBState == null ? BSTATE_EDEFAULT : newBState;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, ArduinomlPackage.CONDITION__BSTATE, oldBState, bState));
@@ -164,7 +164,7 @@ public class ConditionImpl extends MinimalEObjectImpl.Container implements Condi
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case ArduinomlPackage.CONDITION__BSTATE:
-				setBState((BrickState)newValue);
+				setBState((DigitalBrickState)newValue);
 				return;
 			case ArduinomlPackage.CONDITION__SENSOR:
 				setSensor((Sensor)newValue);
@@ -217,7 +217,7 @@ public class ConditionImpl extends MinimalEObjectImpl.Container implements Condi
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (BState: ");
+		result.append(" (bState: ");
 		result.append(bState);
 		result.append(')');
 		return result.toString();

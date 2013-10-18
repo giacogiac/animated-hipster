@@ -10,14 +10,14 @@ import org.eclipse.emf.common.util.Enumerator;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the literals of the enumeration '<em><b>Brick State</b></em>',
+ * A representation of the literals of the enumeration '<em><b>Digital Brick State</b></em>',
  * and utility methods for working with them.
  * <!-- end-user-doc -->
- * @see arduinoml.ArduinomlPackage#getBrickState()
+ * @see arduinoml.ArduinomlPackage#getDigitalBrickState()
  * @model
  * @generated
  */
-public enum BrickState implements Enumerator {
+public enum DigitalBrickState implements Enumerator {
 	/**
 	 * The '<em><b>OFF</b></em>' literal object.
 	 * <!-- begin-user-doc -->
@@ -69,34 +69,34 @@ public enum BrickState implements Enumerator {
 	public static final int ON_VALUE = 1;
 
 	/**
-	 * An array of all the '<em><b>Brick State</b></em>' enumerators.
+	 * An array of all the '<em><b>Digital Brick State</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private static final BrickState[] VALUES_ARRAY =
-		new BrickState[] {
+	private static final DigitalBrickState[] VALUES_ARRAY =
+		new DigitalBrickState[] {
 			OFF,
 			ON,
 		};
 
 	/**
-	 * A public read-only list of all the '<em><b>Brick State</b></em>' enumerators.
+	 * A public read-only list of all the '<em><b>Digital Brick State</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final List<BrickState> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
+	public static final List<DigitalBrickState> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
 
 	/**
-	 * Returns the '<em><b>Brick State</b></em>' literal with the specified literal value.
+	 * Returns the '<em><b>Digital Brick State</b></em>' literal with the specified literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static BrickState get(String literal) {
+	public static DigitalBrickState get(String literal) {
 		for (int i = 0; i < VALUES_ARRAY.length; ++i) {
-			BrickState result = VALUES_ARRAY[i];
+			DigitalBrickState result = VALUES_ARRAY[i];
 			if (result.toString().equals(literal)) {
 				return result;
 			}
@@ -105,14 +105,14 @@ public enum BrickState implements Enumerator {
 	}
 
 	/**
-	 * Returns the '<em><b>Brick State</b></em>' literal with the specified name.
+	 * Returns the '<em><b>Digital Brick State</b></em>' literal with the specified name.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static BrickState getByName(String name) {
+	public static DigitalBrickState getByName(String name) {
 		for (int i = 0; i < VALUES_ARRAY.length; ++i) {
-			BrickState result = VALUES_ARRAY[i];
+			DigitalBrickState result = VALUES_ARRAY[i];
 			if (result.getName().equals(name)) {
 				return result;
 			}
@@ -121,12 +121,12 @@ public enum BrickState implements Enumerator {
 	}
 
 	/**
-	 * Returns the '<em><b>Brick State</b></em>' literal with the specified integer value.
+	 * Returns the '<em><b>Digital Brick State</b></em>' literal with the specified integer value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static BrickState get(int value) {
+	public static DigitalBrickState get(int value) {
 		switch (value) {
 			case OFF_VALUE: return OFF;
 			case ON_VALUE: return ON;
@@ -161,7 +161,7 @@ public enum BrickState implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private BrickState(int value, String name, String literal) {
+	private DigitalBrickState(int value, String name, String literal) {
 		this.value = value;
 		this.name = name;
 		this.literal = literal;
@@ -205,4 +205,4 @@ public enum BrickState implements Enumerator {
 		return literal;
 	}
 	
-} //BrickState
+} //DigitalBrickState

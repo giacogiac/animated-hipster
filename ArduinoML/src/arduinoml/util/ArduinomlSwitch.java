@@ -75,12 +75,14 @@ public class ArduinomlSwitch<T> extends Switch<T> {
 			case ArduinomlPackage.STATE: {
 				State state = (State)theEObject;
 				T result = caseState(state);
+				if (result == null) result = caseNamedElement(state);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case ArduinomlPackage.BRICK: {
 				Brick brick = (Brick)theEObject;
 				T result = caseBrick(brick);
+				if (result == null) result = caseNamedElement(brick);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -88,6 +90,7 @@ public class ArduinomlSwitch<T> extends Switch<T> {
 				Sensor sensor = (Sensor)theEObject;
 				T result = caseSensor(sensor);
 				if (result == null) result = caseBrick(sensor);
+				if (result == null) result = caseNamedElement(sensor);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -95,6 +98,7 @@ public class ArduinomlSwitch<T> extends Switch<T> {
 				Actuator actuator = (Actuator)theEObject;
 				T result = caseActuator(actuator);
 				if (result == null) result = caseBrick(actuator);
+				if (result == null) result = caseNamedElement(actuator);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -113,6 +117,12 @@ public class ArduinomlSwitch<T> extends Switch<T> {
 			case ArduinomlPackage.ACTION: {
 				Action action = (Action)theEObject;
 				T result = caseAction(action);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ArduinomlPackage.NAMED_ELEMENT: {
+				NamedElement namedElement = (NamedElement)theEObject;
+				T result = caseNamedElement(namedElement);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -237,6 +247,21 @@ public class ArduinomlSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseAction(Action object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Named Element</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Named Element</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseNamedElement(NamedElement object) {
 		return null;
 	}
 

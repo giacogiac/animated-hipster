@@ -113,6 +113,43 @@ public interface ArduinomlPackage extends EPackage {
 	int MACHINE_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link arduinoml.impl.NamedElementImpl <em>Named Element</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see arduinoml.impl.NamedElementImpl
+	 * @see arduinoml.impl.ArduinomlPackageImpl#getNamedElement()
+	 * @generated
+	 */
+	int NAMED_ELEMENT = 8;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NAMED_ELEMENT__NAME = 0;
+
+	/**
+	 * The number of structural features of the '<em>Named Element</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NAMED_ELEMENT_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>Named Element</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NAMED_ELEMENT_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link arduinoml.impl.StateImpl <em>State</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -129,7 +166,7 @@ public interface ArduinomlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STATE__NAME = 0;
+	int STATE__NAME = NAMED_ELEMENT__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Transitions</b></em>' containment reference list.
@@ -138,7 +175,7 @@ public interface ArduinomlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STATE__TRANSITIONS = 1;
+	int STATE__TRANSITIONS = NAMED_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Actions</b></em>' containment reference list.
@@ -147,7 +184,7 @@ public interface ArduinomlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STATE__ACTIONS = 2;
+	int STATE__ACTIONS = NAMED_ELEMENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>State</em>' class.
@@ -156,7 +193,7 @@ public interface ArduinomlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STATE_FEATURE_COUNT = 3;
+	int STATE_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>State</em>' class.
@@ -165,7 +202,7 @@ public interface ArduinomlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STATE_OPERATION_COUNT = 0;
+	int STATE_OPERATION_COUNT = NAMED_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link arduinoml.impl.BrickImpl <em>Brick</em>}' class.
@@ -184,7 +221,7 @@ public interface ArduinomlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BRICK__NAME = 0;
+	int BRICK__NAME = NAMED_ELEMENT__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Pin</b></em>' attribute.
@@ -193,7 +230,7 @@ public interface ArduinomlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BRICK__PIN = 1;
+	int BRICK__PIN = NAMED_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Brick</em>' class.
@@ -202,7 +239,7 @@ public interface ArduinomlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BRICK_FEATURE_COUNT = 2;
+	int BRICK_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Brick</em>' class.
@@ -211,7 +248,7 @@ public interface ArduinomlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BRICK_OPERATION_COUNT = 0;
+	int BRICK_OPERATION_COUNT = NAMED_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link arduinoml.impl.SensorImpl <em>Sensor</em>}' class.
@@ -444,14 +481,14 @@ public interface ArduinomlPackage extends EPackage {
 	int ACTION_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link arduinoml.BrickState <em>Brick State</em>}' enum.
+	 * The meta object id for the '{@link arduinoml.DigitalBrickState <em>Digital Brick State</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see arduinoml.BrickState
-	 * @see arduinoml.impl.ArduinomlPackageImpl#getBrickState()
+	 * @see arduinoml.DigitalBrickState
+	 * @see arduinoml.impl.ArduinomlPackageImpl#getDigitalBrickState()
 	 * @generated
 	 */
-	int BRICK_STATE = 8;
+	int DIGITAL_BRICK_STATE = 9;
 
 
 	/**
@@ -508,17 +545,6 @@ public interface ArduinomlPackage extends EPackage {
 	EClass getState();
 
 	/**
-	 * Returns the meta object for the attribute '{@link arduinoml.State#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see arduinoml.State#getName()
-	 * @see #getState()
-	 * @generated
-	 */
-	EAttribute getState_Name();
-
-	/**
 	 * Returns the meta object for the containment reference list '{@link arduinoml.State#getTransitions <em>Transitions</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -549,17 +575,6 @@ public interface ArduinomlPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getBrick();
-
-	/**
-	 * Returns the meta object for the attribute '{@link arduinoml.Brick#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see arduinoml.Brick#getName()
-	 * @see #getBrick()
-	 * @generated
-	 */
-	EAttribute getBrick_Name();
 
 	/**
 	 * Returns the meta object for the attribute '{@link arduinoml.Brick#getPin <em>Pin</em>}'.
@@ -689,14 +704,35 @@ public interface ArduinomlPackage extends EPackage {
 	EReference getAction_Actuator();
 
 	/**
-	 * Returns the meta object for enum '{@link arduinoml.BrickState <em>Brick State</em>}'.
+	 * Returns the meta object for class '{@link arduinoml.NamedElement <em>Named Element</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for enum '<em>Brick State</em>'.
-	 * @see arduinoml.BrickState
+	 * @return the meta object for class '<em>Named Element</em>'.
+	 * @see arduinoml.NamedElement
 	 * @generated
 	 */
-	EEnum getBrickState();
+	EClass getNamedElement();
+
+	/**
+	 * Returns the meta object for the attribute '{@link arduinoml.NamedElement#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see arduinoml.NamedElement#getName()
+	 * @see #getNamedElement()
+	 * @generated
+	 */
+	EAttribute getNamedElement_Name();
+
+	/**
+	 * Returns the meta object for enum '{@link arduinoml.DigitalBrickState <em>Digital Brick State</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Digital Brick State</em>'.
+	 * @see arduinoml.DigitalBrickState
+	 * @generated
+	 */
+	EEnum getDigitalBrickState();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -766,14 +802,6 @@ public interface ArduinomlPackage extends EPackage {
 		EClass STATE = eINSTANCE.getState();
 
 		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute STATE__NAME = eINSTANCE.getState_Name();
-
-		/**
 		 * The meta object literal for the '<em><b>Transitions</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -798,14 +826,6 @@ public interface ArduinomlPackage extends EPackage {
 		 * @generated
 		 */
 		EClass BRICK = eINSTANCE.getBrick();
-
-		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute BRICK__NAME = eINSTANCE.getBrick_Name();
 
 		/**
 		 * The meta object literal for the '<em><b>Pin</b></em>' attribute feature.
@@ -914,14 +934,32 @@ public interface ArduinomlPackage extends EPackage {
 		EReference ACTION__ACTUATOR = eINSTANCE.getAction_Actuator();
 
 		/**
-		 * The meta object literal for the '{@link arduinoml.BrickState <em>Brick State</em>}' enum.
+		 * The meta object literal for the '{@link arduinoml.impl.NamedElementImpl <em>Named Element</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see arduinoml.BrickState
-		 * @see arduinoml.impl.ArduinomlPackageImpl#getBrickState()
+		 * @see arduinoml.impl.NamedElementImpl
+		 * @see arduinoml.impl.ArduinomlPackageImpl#getNamedElement()
 		 * @generated
 		 */
-		EEnum BRICK_STATE = eINSTANCE.getBrickState();
+		EClass NAMED_ELEMENT = eINSTANCE.getNamedElement();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute NAMED_ELEMENT__NAME = eINSTANCE.getNamedElement_Name();
+
+		/**
+		 * The meta object literal for the '{@link arduinoml.DigitalBrickState <em>Digital Brick State</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see arduinoml.DigitalBrickState
+		 * @see arduinoml.impl.ArduinomlPackageImpl#getDigitalBrickState()
+		 * @generated
+		 */
+		EEnum DIGITAL_BRICK_STATE = eINSTANCE.getDigitalBrickState();
 
 	}
 

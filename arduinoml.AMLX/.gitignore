@@ -1,2 +1,6 @@
 /bin
-/src/arduinoml/*/*
+/src/arduinoml/*
+!/src/arduinoml/AMLX.xtext
+!/src/arduinoml/GenerateAMLX.mwe2
+!/src/arduinoml/AMLXStandaloneSetup.java
+!/src/arduinoml/AMLXRuntimeModule.java

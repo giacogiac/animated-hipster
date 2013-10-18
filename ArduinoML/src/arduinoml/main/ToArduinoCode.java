@@ -91,10 +91,10 @@ public class ToArduinoCode extends ArduinomlSwitch<String> {
 		return null;
 	}
 	
-	private String BStateToString(BrickState bs) {
-		if (bs == BrickState.ON)
+	private String BStateToString(DigitalBrickState bs) {
+		if (bs == DigitalBrickState.ON)
 			return "HIGH";
-		if (bs == BrickState.OFF)
+		if (bs == DigitalBrickState.OFF)
 			return "LOW";
 		return null;
 	}

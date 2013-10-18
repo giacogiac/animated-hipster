@@ -65,6 +65,7 @@ public class ArduinomlFactoryImpl extends EFactoryImpl implements ArduinomlFacto
 			case ArduinomlPackage.TRANSITION: return createTransition();
 			case ArduinomlPackage.CONDITION: return createCondition();
 			case ArduinomlPackage.ACTION: return createAction();
+			case ArduinomlPackage.NAMED_ELEMENT: return createNamedElement();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -78,8 +79,8 @@ public class ArduinomlFactoryImpl extends EFactoryImpl implements ArduinomlFacto
 	@Override
 	public Object createFromString(EDataType eDataType, String initialValue) {
 		switch (eDataType.getClassifierID()) {
-			case ArduinomlPackage.BRICK_STATE:
-				return createBrickStateFromString(eDataType, initialValue);
+			case ArduinomlPackage.DIGITAL_BRICK_STATE:
+				return createDigitalBrickStateFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -93,8 +94,8 @@ public class ArduinomlFactoryImpl extends EFactoryImpl implements ArduinomlFacto
 	@Override
 	public String convertToString(EDataType eDataType, Object instanceValue) {
 		switch (eDataType.getClassifierID()) {
-			case ArduinomlPackage.BRICK_STATE:
-				return convertBrickStateToString(eDataType, instanceValue);
+			case ArduinomlPackage.DIGITAL_BRICK_STATE:
+				return convertDigitalBrickStateToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -185,8 +186,18 @@ public class ArduinomlFactoryImpl extends EFactoryImpl implements ArduinomlFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public BrickState createBrickStateFromString(EDataType eDataType, String initialValue) {
-		BrickState result = BrickState.get(initialValue);
+	public NamedElement createNamedElement() {
+		NamedElementImpl namedElement = new NamedElementImpl();
+		return namedElement;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public DigitalBrickState createDigitalBrickStateFromString(EDataType eDataType, String initialValue) {
+		DigitalBrickState result = DigitalBrickState.get(initialValue);
 		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
 		return result;
 	}
@@ -196,7 +207,7 @@ public class ArduinomlFactoryImpl extends EFactoryImpl implements ArduinomlFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String convertBrickStateToString(EDataType eDataType, Object instanceValue) {
+	public String convertDigitalBrickStateToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 

@@ -1,0 +1,8 @@
+Machine{
+	states{
+		State {
+			Name hello
+		}
+	}
+	start 
+}
