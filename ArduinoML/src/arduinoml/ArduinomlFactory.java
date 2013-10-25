@@ -67,22 +67,31 @@ public interface ArduinomlFactory extends EFactory {
 	Transition createTransition();
 
 	/**
-	 * Returns a new object of class '<em>Condition</em>'.
+	 * Returns a new object of class '<em>Digital Sensor Condition</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Condition</em>'.
+	 * @return a new object of class '<em>Digital Sensor Condition</em>'.
 	 * @generated
 	 */
-	Condition createCondition();
+	DigitalSensorCondition createDigitalSensorCondition();
 
 	/**
-	 * Returns a new object of class '<em>Action</em>'.
+	 * Returns a new object of class '<em>Digital Action</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Action</em>'.
+	 * @return a new object of class '<em>Digital Action</em>'.
 	 * @generated
 	 */
-	Action createAction();
+	DigitalAction createDigitalAction();
+
+	/**
+	 * Returns a new object of class '<em>Time Condition</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Time Condition</em>'.
+	 * @generated
+	 */
+	TimeCondition createTimeCondition();
 
 	/**
 	 * Returns the package supported by this factory.

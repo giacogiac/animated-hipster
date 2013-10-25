@@ -396,25 +396,7 @@ public interface ArduinomlPackage extends EPackage {
 	 * @see arduinoml.impl.ArduinomlPackageImpl#getCondition()
 	 * @generated
 	 */
-	int CONDITION = 6;
-
-	/**
-	 * The feature id for the '<em><b>BState</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONDITION__BSTATE = 0;
-
-	/**
-	 * The feature id for the '<em><b>Sensor</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONDITION__SENSOR = 1;
+	int CONDITION = 9;
 
 	/**
 	 * The number of structural features of the '<em>Condition</em>' class.
@@ -423,7 +405,7 @@ public interface ArduinomlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONDITION_FEATURE_COUNT = 2;
+	int CONDITION_FEATURE_COUNT = 0;
 
 	/**
 	 * The number of operations of the '<em>Condition</em>' class.
@@ -435,14 +417,14 @@ public interface ArduinomlPackage extends EPackage {
 	int CONDITION_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link arduinoml.impl.ActionImpl <em>Action</em>}' class.
+	 * The meta object id for the '{@link arduinoml.impl.DigitalSensorConditionImpl <em>Digital Sensor Condition</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see arduinoml.impl.ActionImpl
-	 * @see arduinoml.impl.ArduinomlPackageImpl#getAction()
+	 * @see arduinoml.impl.DigitalSensorConditionImpl
+	 * @see arduinoml.impl.ArduinomlPackageImpl#getDigitalSensorCondition()
 	 * @generated
 	 */
-	int ACTION = 7;
+	int DIGITAL_SENSOR_CONDITION = 6;
 
 	/**
 	 * The feature id for the '<em><b>BState</b></em>' attribute.
@@ -451,7 +433,53 @@ public interface ArduinomlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ACTION__BSTATE = 0;
+	int DIGITAL_SENSOR_CONDITION__BSTATE = CONDITION_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Sensor</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DIGITAL_SENSOR_CONDITION__SENSOR = CONDITION_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Digital Sensor Condition</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DIGITAL_SENSOR_CONDITION_FEATURE_COUNT = CONDITION_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of operations of the '<em>Digital Sensor Condition</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DIGITAL_SENSOR_CONDITION_OPERATION_COUNT = CONDITION_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link arduinoml.impl.DigitalActionImpl <em>Digital Action</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see arduinoml.impl.DigitalActionImpl
+	 * @see arduinoml.impl.ArduinomlPackageImpl#getDigitalAction()
+	 * @generated
+	 */
+	int DIGITAL_ACTION = 7;
+
+	/**
+	 * The feature id for the '<em><b>BState</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DIGITAL_ACTION__BSTATE = 0;
 
 	/**
 	 * The feature id for the '<em><b>Actuator</b></em>' reference.
@@ -460,25 +488,71 @@ public interface ArduinomlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ACTION__ACTUATOR = 1;
+	int DIGITAL_ACTION__ACTUATOR = 1;
 
 	/**
-	 * The number of structural features of the '<em>Action</em>' class.
+	 * The number of structural features of the '<em>Digital Action</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ACTION_FEATURE_COUNT = 2;
+	int DIGITAL_ACTION_FEATURE_COUNT = 2;
 
 	/**
-	 * The number of operations of the '<em>Action</em>' class.
+	 * The number of operations of the '<em>Digital Action</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ACTION_OPERATION_COUNT = 0;
+	int DIGITAL_ACTION_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link arduinoml.impl.TimeConditionImpl <em>Time Condition</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see arduinoml.impl.TimeConditionImpl
+	 * @see arduinoml.impl.ArduinomlPackageImpl#getTimeCondition()
+	 * @generated
+	 */
+	int TIME_CONDITION = 10;
+
+	/**
+	 * The feature id for the '<em><b>Time</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TIME_CONDITION__TIME = CONDITION_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>TComp</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TIME_CONDITION__TCOMP = CONDITION_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Time Condition</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TIME_CONDITION_FEATURE_COUNT = CONDITION_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of operations of the '<em>Time Condition</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TIME_CONDITION_OPERATION_COUNT = CONDITION_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link arduinoml.DigitalBrickState <em>Digital Brick State</em>}' enum.
@@ -488,7 +562,17 @@ public interface ArduinomlPackage extends EPackage {
 	 * @see arduinoml.impl.ArduinomlPackageImpl#getDigitalBrickState()
 	 * @generated
 	 */
-	int DIGITAL_BRICK_STATE = 9;
+	int DIGITAL_BRICK_STATE = 11;
+
+	/**
+	 * The meta object id for the '{@link arduinoml.Comparison <em>Comparison</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see arduinoml.Comparison
+	 * @see arduinoml.impl.ArduinomlPackageImpl#getComparison()
+	 * @generated
+	 */
+	int COMPARISON = 12;
 
 
 	/**
@@ -640,68 +724,68 @@ public interface ArduinomlPackage extends EPackage {
 	EReference getTransition_Conditions();
 
 	/**
-	 * Returns the meta object for class '{@link arduinoml.Condition <em>Condition</em>}'.
+	 * Returns the meta object for class '{@link arduinoml.DigitalSensorCondition <em>Digital Sensor Condition</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Condition</em>'.
-	 * @see arduinoml.Condition
+	 * @return the meta object for class '<em>Digital Sensor Condition</em>'.
+	 * @see arduinoml.DigitalSensorCondition
 	 * @generated
 	 */
-	EClass getCondition();
+	EClass getDigitalSensorCondition();
 
 	/**
-	 * Returns the meta object for the attribute '{@link arduinoml.Condition#getBState <em>BState</em>}'.
+	 * Returns the meta object for the attribute '{@link arduinoml.DigitalSensorCondition#getBState <em>BState</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>BState</em>'.
-	 * @see arduinoml.Condition#getBState()
-	 * @see #getCondition()
+	 * @see arduinoml.DigitalSensorCondition#getBState()
+	 * @see #getDigitalSensorCondition()
 	 * @generated
 	 */
-	EAttribute getCondition_BState();
+	EAttribute getDigitalSensorCondition_BState();
 
 	/**
-	 * Returns the meta object for the reference '{@link arduinoml.Condition#getSensor <em>Sensor</em>}'.
+	 * Returns the meta object for the reference '{@link arduinoml.DigitalSensorCondition#getSensor <em>Sensor</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Sensor</em>'.
-	 * @see arduinoml.Condition#getSensor()
-	 * @see #getCondition()
+	 * @see arduinoml.DigitalSensorCondition#getSensor()
+	 * @see #getDigitalSensorCondition()
 	 * @generated
 	 */
-	EReference getCondition_Sensor();
+	EReference getDigitalSensorCondition_Sensor();
 
 	/**
-	 * Returns the meta object for class '{@link arduinoml.Action <em>Action</em>}'.
+	 * Returns the meta object for class '{@link arduinoml.DigitalAction <em>Digital Action</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Action</em>'.
-	 * @see arduinoml.Action
+	 * @return the meta object for class '<em>Digital Action</em>'.
+	 * @see arduinoml.DigitalAction
 	 * @generated
 	 */
-	EClass getAction();
+	EClass getDigitalAction();
 
 	/**
-	 * Returns the meta object for the attribute '{@link arduinoml.Action#getBState <em>BState</em>}'.
+	 * Returns the meta object for the attribute '{@link arduinoml.DigitalAction#getBState <em>BState</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>BState</em>'.
-	 * @see arduinoml.Action#getBState()
-	 * @see #getAction()
+	 * @see arduinoml.DigitalAction#getBState()
+	 * @see #getDigitalAction()
 	 * @generated
 	 */
-	EAttribute getAction_BState();
+	EAttribute getDigitalAction_BState();
 
 	/**
-	 * Returns the meta object for the reference '{@link arduinoml.Action#getActuator <em>Actuator</em>}'.
+	 * Returns the meta object for the reference '{@link arduinoml.DigitalAction#getActuator <em>Actuator</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Actuator</em>'.
-	 * @see arduinoml.Action#getActuator()
-	 * @see #getAction()
+	 * @see arduinoml.DigitalAction#getActuator()
+	 * @see #getDigitalAction()
 	 * @generated
 	 */
-	EReference getAction_Actuator();
+	EReference getDigitalAction_Actuator();
 
 	/**
 	 * Returns the meta object for class '{@link arduinoml.NamedElement <em>Named Element</em>}'.
@@ -725,6 +809,48 @@ public interface ArduinomlPackage extends EPackage {
 	EAttribute getNamedElement_Name();
 
 	/**
+	 * Returns the meta object for class '{@link arduinoml.Condition <em>Condition</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Condition</em>'.
+	 * @see arduinoml.Condition
+	 * @generated
+	 */
+	EClass getCondition();
+
+	/**
+	 * Returns the meta object for class '{@link arduinoml.TimeCondition <em>Time Condition</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Time Condition</em>'.
+	 * @see arduinoml.TimeCondition
+	 * @generated
+	 */
+	EClass getTimeCondition();
+
+	/**
+	 * Returns the meta object for the attribute '{@link arduinoml.TimeCondition#getTime <em>Time</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Time</em>'.
+	 * @see arduinoml.TimeCondition#getTime()
+	 * @see #getTimeCondition()
+	 * @generated
+	 */
+	EAttribute getTimeCondition_Time();
+
+	/**
+	 * Returns the meta object for the attribute '{@link arduinoml.TimeCondition#getTComp <em>TComp</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>TComp</em>'.
+	 * @see arduinoml.TimeCondition#getTComp()
+	 * @see #getTimeCondition()
+	 * @generated
+	 */
+	EAttribute getTimeCondition_TComp();
+
+	/**
 	 * Returns the meta object for enum '{@link arduinoml.DigitalBrickState <em>Digital Brick State</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -733,6 +859,16 @@ public interface ArduinomlPackage extends EPackage {
 	 * @generated
 	 */
 	EEnum getDigitalBrickState();
+
+	/**
+	 * Returns the meta object for enum '{@link arduinoml.Comparison <em>Comparison</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Comparison</em>'.
+	 * @see arduinoml.Comparison
+	 * @generated
+	 */
+	EEnum getComparison();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -882,14 +1018,14 @@ public interface ArduinomlPackage extends EPackage {
 		EReference TRANSITION__CONDITIONS = eINSTANCE.getTransition_Conditions();
 
 		/**
-		 * The meta object literal for the '{@link arduinoml.impl.ConditionImpl <em>Condition</em>}' class.
+		 * The meta object literal for the '{@link arduinoml.impl.DigitalSensorConditionImpl <em>Digital Sensor Condition</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see arduinoml.impl.ConditionImpl
-		 * @see arduinoml.impl.ArduinomlPackageImpl#getCondition()
+		 * @see arduinoml.impl.DigitalSensorConditionImpl
+		 * @see arduinoml.impl.ArduinomlPackageImpl#getDigitalSensorCondition()
 		 * @generated
 		 */
-		EClass CONDITION = eINSTANCE.getCondition();
+		EClass DIGITAL_SENSOR_CONDITION = eINSTANCE.getDigitalSensorCondition();
 
 		/**
 		 * The meta object literal for the '<em><b>BState</b></em>' attribute feature.
@@ -897,7 +1033,7 @@ public interface ArduinomlPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute CONDITION__BSTATE = eINSTANCE.getCondition_BState();
+		EAttribute DIGITAL_SENSOR_CONDITION__BSTATE = eINSTANCE.getDigitalSensorCondition_BState();
 
 		/**
 		 * The meta object literal for the '<em><b>Sensor</b></em>' reference feature.
@@ -905,17 +1041,17 @@ public interface ArduinomlPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference CONDITION__SENSOR = eINSTANCE.getCondition_Sensor();
+		EReference DIGITAL_SENSOR_CONDITION__SENSOR = eINSTANCE.getDigitalSensorCondition_Sensor();
 
 		/**
-		 * The meta object literal for the '{@link arduinoml.impl.ActionImpl <em>Action</em>}' class.
+		 * The meta object literal for the '{@link arduinoml.impl.DigitalActionImpl <em>Digital Action</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see arduinoml.impl.ActionImpl
-		 * @see arduinoml.impl.ArduinomlPackageImpl#getAction()
+		 * @see arduinoml.impl.DigitalActionImpl
+		 * @see arduinoml.impl.ArduinomlPackageImpl#getDigitalAction()
 		 * @generated
 		 */
-		EClass ACTION = eINSTANCE.getAction();
+		EClass DIGITAL_ACTION = eINSTANCE.getDigitalAction();
 
 		/**
 		 * The meta object literal for the '<em><b>BState</b></em>' attribute feature.
@@ -923,7 +1059,7 @@ public interface ArduinomlPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute ACTION__BSTATE = eINSTANCE.getAction_BState();
+		EAttribute DIGITAL_ACTION__BSTATE = eINSTANCE.getDigitalAction_BState();
 
 		/**
 		 * The meta object literal for the '<em><b>Actuator</b></em>' reference feature.
@@ -931,7 +1067,7 @@ public interface ArduinomlPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference ACTION__ACTUATOR = eINSTANCE.getAction_Actuator();
+		EReference DIGITAL_ACTION__ACTUATOR = eINSTANCE.getDigitalAction_Actuator();
 
 		/**
 		 * The meta object literal for the '{@link arduinoml.impl.NamedElementImpl <em>Named Element</em>}' class.
@@ -952,6 +1088,42 @@ public interface ArduinomlPackage extends EPackage {
 		EAttribute NAMED_ELEMENT__NAME = eINSTANCE.getNamedElement_Name();
 
 		/**
+		 * The meta object literal for the '{@link arduinoml.impl.ConditionImpl <em>Condition</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see arduinoml.impl.ConditionImpl
+		 * @see arduinoml.impl.ArduinomlPackageImpl#getCondition()
+		 * @generated
+		 */
+		EClass CONDITION = eINSTANCE.getCondition();
+
+		/**
+		 * The meta object literal for the '{@link arduinoml.impl.TimeConditionImpl <em>Time Condition</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see arduinoml.impl.TimeConditionImpl
+		 * @see arduinoml.impl.ArduinomlPackageImpl#getTimeCondition()
+		 * @generated
+		 */
+		EClass TIME_CONDITION = eINSTANCE.getTimeCondition();
+
+		/**
+		 * The meta object literal for the '<em><b>Time</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TIME_CONDITION__TIME = eINSTANCE.getTimeCondition_Time();
+
+		/**
+		 * The meta object literal for the '<em><b>TComp</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TIME_CONDITION__TCOMP = eINSTANCE.getTimeCondition_TComp();
+
+		/**
 		 * The meta object literal for the '{@link arduinoml.DigitalBrickState <em>Digital Brick State</em>}' enum.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -960,6 +1132,16 @@ public interface ArduinomlPackage extends EPackage {
 		 * @generated
 		 */
 		EEnum DIGITAL_BRICK_STATE = eINSTANCE.getDigitalBrickState();
+
+		/**
+		 * The meta object literal for the '{@link arduinoml.Comparison <em>Comparison</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see arduinoml.Comparison
+		 * @see arduinoml.impl.ArduinomlPackageImpl#getComparison()
+		 * @generated
+		 */
+		EEnum COMPARISON = eINSTANCE.getComparison();
 
 	}
 

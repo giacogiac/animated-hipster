@@ -92,16 +92,24 @@ public class ArduinomlAdapterFactory extends AdapterFactoryImpl {
 				return createTransitionAdapter();
 			}
 			@Override
-			public Adapter caseCondition(Condition object) {
-				return createConditionAdapter();
+			public Adapter caseDigitalSensorCondition(DigitalSensorCondition object) {
+				return createDigitalSensorConditionAdapter();
 			}
 			@Override
-			public Adapter caseAction(Action object) {
-				return createActionAdapter();
+			public Adapter caseDigitalAction(DigitalAction object) {
+				return createDigitalActionAdapter();
 			}
 			@Override
 			public Adapter caseNamedElement(NamedElement object) {
 				return createNamedElementAdapter();
+			}
+			@Override
+			public Adapter caseCondition(Condition object) {
+				return createConditionAdapter();
+			}
+			@Override
+			public Adapter caseTimeCondition(TimeCondition object) {
+				return createTimeConditionAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -208,30 +216,30 @@ public class ArduinomlAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link arduinoml.Condition <em>Condition</em>}'.
+	 * Creates a new adapter for an object of class '{@link arduinoml.DigitalSensorCondition <em>Digital Sensor Condition</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see arduinoml.Condition
+	 * @see arduinoml.DigitalSensorCondition
 	 * @generated
 	 */
-	public Adapter createConditionAdapter() {
+	public Adapter createDigitalSensorConditionAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link arduinoml.Action <em>Action</em>}'.
+	 * Creates a new adapter for an object of class '{@link arduinoml.DigitalAction <em>Digital Action</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see arduinoml.Action
+	 * @see arduinoml.DigitalAction
 	 * @generated
 	 */
-	public Adapter createActionAdapter() {
+	public Adapter createDigitalActionAdapter() {
 		return null;
 	}
 
@@ -246,6 +254,34 @@ public class ArduinomlAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createNamedElementAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link arduinoml.Condition <em>Condition</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see arduinoml.Condition
+	 * @generated
+	 */
+	public Adapter createConditionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link arduinoml.TimeCondition <em>Time Condition</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see arduinoml.TimeCondition
+	 * @generated
+	 */
+	public Adapter createTimeConditionAdapter() {
 		return null;
 	}
 

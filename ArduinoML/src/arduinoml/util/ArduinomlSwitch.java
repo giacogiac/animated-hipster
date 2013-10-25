@@ -108,21 +108,35 @@ public class ArduinomlSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ArduinomlPackage.CONDITION: {
-				Condition condition = (Condition)theEObject;
-				T result = caseCondition(condition);
+			case ArduinomlPackage.DIGITAL_SENSOR_CONDITION: {
+				DigitalSensorCondition digitalSensorCondition = (DigitalSensorCondition)theEObject;
+				T result = caseDigitalSensorCondition(digitalSensorCondition);
+				if (result == null) result = caseCondition(digitalSensorCondition);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ArduinomlPackage.ACTION: {
-				Action action = (Action)theEObject;
-				T result = caseAction(action);
+			case ArduinomlPackage.DIGITAL_ACTION: {
+				DigitalAction digitalAction = (DigitalAction)theEObject;
+				T result = caseDigitalAction(digitalAction);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case ArduinomlPackage.NAMED_ELEMENT: {
 				NamedElement namedElement = (NamedElement)theEObject;
 				T result = caseNamedElement(namedElement);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ArduinomlPackage.CONDITION: {
+				Condition condition = (Condition)theEObject;
+				T result = caseCondition(condition);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ArduinomlPackage.TIME_CONDITION: {
+				TimeCondition timeCondition = (TimeCondition)theEObject;
+				T result = caseTimeCondition(timeCondition);
+				if (result == null) result = caseCondition(timeCondition);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -221,32 +235,32 @@ public class ArduinomlSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Condition</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Digital Sensor Condition</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Condition</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Digital Sensor Condition</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseCondition(Condition object) {
+	public T caseDigitalSensorCondition(DigitalSensorCondition object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Action</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Digital Action</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Action</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Digital Action</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseAction(Action object) {
+	public T caseDigitalAction(DigitalAction object) {
 		return null;
 	}
 
@@ -262,6 +276,36 @@ public class ArduinomlSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseNamedElement(NamedElement object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Condition</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Condition</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseCondition(Condition object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Time Condition</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Time Condition</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseTimeCondition(TimeCondition object) {
 		return null;
 	}
 

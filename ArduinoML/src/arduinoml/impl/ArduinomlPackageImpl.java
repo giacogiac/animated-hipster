@@ -2,17 +2,20 @@
  */
 package arduinoml.impl;
 
-import arduinoml.Action;
 import arduinoml.Actuator;
 import arduinoml.ArduinomlFactory;
 import arduinoml.ArduinomlPackage;
 import arduinoml.Brick;
+import arduinoml.Comparison;
 import arduinoml.Condition;
+import arduinoml.DigitalAction;
 import arduinoml.DigitalBrickState;
+import arduinoml.DigitalSensorCondition;
 import arduinoml.Machine;
 import arduinoml.NamedElement;
 import arduinoml.Sensor;
 import arduinoml.State;
+import arduinoml.TimeCondition;
 import arduinoml.Transition;
 
 import org.eclipse.emf.ecore.EAttribute;
@@ -77,14 +80,14 @@ public class ArduinomlPackageImpl extends EPackageImpl implements ArduinomlPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass conditionEClass = null;
+	private EClass digitalSensorConditionEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass actionEClass = null;
+	private EClass digitalActionEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -98,7 +101,28 @@ public class ArduinomlPackageImpl extends EPackageImpl implements ArduinomlPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass conditionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass timeConditionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EEnum digitalBrickStateEEnum = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum comparisonEEnum = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -292,8 +316,8 @@ public class ArduinomlPackageImpl extends EPackageImpl implements ArduinomlPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getCondition() {
-		return conditionEClass;
+	public EClass getDigitalSensorCondition() {
+		return digitalSensorConditionEClass;
 	}
 
 	/**
@@ -301,8 +325,8 @@ public class ArduinomlPackageImpl extends EPackageImpl implements ArduinomlPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getCondition_BState() {
-		return (EAttribute)conditionEClass.getEStructuralFeatures().get(0);
+	public EAttribute getDigitalSensorCondition_BState() {
+		return (EAttribute)digitalSensorConditionEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -310,8 +334,8 @@ public class ArduinomlPackageImpl extends EPackageImpl implements ArduinomlPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getCondition_Sensor() {
-		return (EReference)conditionEClass.getEStructuralFeatures().get(1);
+	public EReference getDigitalSensorCondition_Sensor() {
+		return (EReference)digitalSensorConditionEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -319,8 +343,8 @@ public class ArduinomlPackageImpl extends EPackageImpl implements ArduinomlPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getAction() {
-		return actionEClass;
+	public EClass getDigitalAction() {
+		return digitalActionEClass;
 	}
 
 	/**
@@ -328,8 +352,8 @@ public class ArduinomlPackageImpl extends EPackageImpl implements ArduinomlPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getAction_BState() {
-		return (EAttribute)actionEClass.getEStructuralFeatures().get(0);
+	public EAttribute getDigitalAction_BState() {
+		return (EAttribute)digitalActionEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -337,8 +361,8 @@ public class ArduinomlPackageImpl extends EPackageImpl implements ArduinomlPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getAction_Actuator() {
-		return (EReference)actionEClass.getEStructuralFeatures().get(1);
+	public EReference getDigitalAction_Actuator() {
+		return (EReference)digitalActionEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -364,8 +388,53 @@ public class ArduinomlPackageImpl extends EPackageImpl implements ArduinomlPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getCondition() {
+		return conditionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getTimeCondition() {
+		return timeConditionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getTimeCondition_Time() {
+		return (EAttribute)timeConditionEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getTimeCondition_TComp() {
+		return (EAttribute)timeConditionEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getDigitalBrickState() {
 		return digitalBrickStateEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EEnum getComparison() {
+		return comparisonEEnum;
 	}
 
 	/**
@@ -416,19 +485,26 @@ public class ArduinomlPackageImpl extends EPackageImpl implements ArduinomlPacka
 		createEReference(transitionEClass, TRANSITION__GOTO);
 		createEReference(transitionEClass, TRANSITION__CONDITIONS);
 
-		conditionEClass = createEClass(CONDITION);
-		createEAttribute(conditionEClass, CONDITION__BSTATE);
-		createEReference(conditionEClass, CONDITION__SENSOR);
+		digitalSensorConditionEClass = createEClass(DIGITAL_SENSOR_CONDITION);
+		createEAttribute(digitalSensorConditionEClass, DIGITAL_SENSOR_CONDITION__BSTATE);
+		createEReference(digitalSensorConditionEClass, DIGITAL_SENSOR_CONDITION__SENSOR);
 
-		actionEClass = createEClass(ACTION);
-		createEAttribute(actionEClass, ACTION__BSTATE);
-		createEReference(actionEClass, ACTION__ACTUATOR);
+		digitalActionEClass = createEClass(DIGITAL_ACTION);
+		createEAttribute(digitalActionEClass, DIGITAL_ACTION__BSTATE);
+		createEReference(digitalActionEClass, DIGITAL_ACTION__ACTUATOR);
 
 		namedElementEClass = createEClass(NAMED_ELEMENT);
 		createEAttribute(namedElementEClass, NAMED_ELEMENT__NAME);
 
+		conditionEClass = createEClass(CONDITION);
+
+		timeConditionEClass = createEClass(TIME_CONDITION);
+		createEAttribute(timeConditionEClass, TIME_CONDITION__TIME);
+		createEAttribute(timeConditionEClass, TIME_CONDITION__TCOMP);
+
 		// Create enums
 		digitalBrickStateEEnum = createEEnum(DIGITAL_BRICK_STATE);
+		comparisonEEnum = createEEnum(COMPARISON);
 	}
 
 	/**
@@ -463,6 +539,8 @@ public class ArduinomlPackageImpl extends EPackageImpl implements ArduinomlPacka
 		brickEClass.getESuperTypes().add(this.getNamedElement());
 		sensorEClass.getESuperTypes().add(this.getBrick());
 		actuatorEClass.getESuperTypes().add(this.getBrick());
+		digitalSensorConditionEClass.getESuperTypes().add(this.getCondition());
+		timeConditionEClass.getESuperTypes().add(this.getCondition());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(machineEClass, Machine.class, "Machine", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -472,7 +550,7 @@ public class ArduinomlPackageImpl extends EPackageImpl implements ArduinomlPacka
 
 		initEClass(stateEClass, State.class, "State", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getState_Transitions(), this.getTransition(), null, "transitions", null, 0, -1, State.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getState_Actions(), this.getAction(), null, "actions", null, 0, -1, State.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getState_Actions(), this.getDigitalAction(), null, "actions", null, 0, -1, State.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(brickEClass, Brick.class, "Brick", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getBrick_Pin(), ecorePackage.getEInt(), "pin", null, 1, 1, Brick.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -485,21 +563,32 @@ public class ArduinomlPackageImpl extends EPackageImpl implements ArduinomlPacka
 		initEReference(getTransition_Goto(), this.getState(), null, "goto", null, 1, 1, Transition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getTransition_Conditions(), this.getCondition(), null, "conditions", null, 1, -1, Transition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(conditionEClass, Condition.class, "Condition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getCondition_BState(), this.getDigitalBrickState(), "bState", null, 1, 1, Condition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getCondition_Sensor(), this.getSensor(), null, "sensor", null, 1, 1, Condition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(digitalSensorConditionEClass, DigitalSensorCondition.class, "DigitalSensorCondition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getDigitalSensorCondition_BState(), this.getDigitalBrickState(), "bState", null, 1, 1, DigitalSensorCondition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getDigitalSensorCondition_Sensor(), this.getSensor(), null, "sensor", null, 1, 1, DigitalSensorCondition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(actionEClass, Action.class, "Action", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getAction_BState(), this.getDigitalBrickState(), "bState", null, 1, 1, Action.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getAction_Actuator(), this.getActuator(), null, "actuator", null, 1, 1, Action.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(digitalActionEClass, DigitalAction.class, "DigitalAction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getDigitalAction_BState(), this.getDigitalBrickState(), "bState", null, 1, 1, DigitalAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getDigitalAction_Actuator(), this.getActuator(), null, "actuator", null, 1, 1, DigitalAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(namedElementEClass, NamedElement.class, "NamedElement", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getNamedElement_Name(), ecorePackage.getEString(), "name", null, 1, 1, NamedElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(conditionEClass, Condition.class, "Condition", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(timeConditionEClass, TimeCondition.class, "TimeCondition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getTimeCondition_Time(), ecorePackage.getEInt(), "time", null, 1, 1, TimeCondition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getTimeCondition_TComp(), this.getComparison(), "tComp", null, 1, 1, TimeCondition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(digitalBrickStateEEnum, DigitalBrickState.class, "DigitalBrickState");
 		addEEnumLiteral(digitalBrickStateEEnum, DigitalBrickState.OFF);
 		addEEnumLiteral(digitalBrickStateEEnum, DigitalBrickState.ON);
+
+		initEEnum(comparisonEEnum, Comparison.class, "Comparison");
+		addEEnumLiteral(comparisonEEnum, Comparison.SUPERIOR);
+		addEEnumLiteral(comparisonEEnum, Comparison.INFERIOR);
+		addEEnumLiteral(comparisonEEnum, Comparison.EQUAL);
 
 		// Create resource
 		createResource(eNS_URI);

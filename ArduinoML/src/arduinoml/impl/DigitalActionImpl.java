@@ -2,9 +2,9 @@
  */
 package arduinoml.impl;
 
-import arduinoml.Action;
 import arduinoml.Actuator;
 import arduinoml.ArduinomlPackage;
+import arduinoml.DigitalAction;
 import arduinoml.DigitalBrickState;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -17,19 +17,19 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Action</b></em>'.
+ * An implementation of the model object '<em><b>Digital Action</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link arduinoml.impl.ActionImpl#getBState <em>BState</em>}</li>
- *   <li>{@link arduinoml.impl.ActionImpl#getActuator <em>Actuator</em>}</li>
+ *   <li>{@link arduinoml.impl.DigitalActionImpl#getBState <em>BState</em>}</li>
+ *   <li>{@link arduinoml.impl.DigitalActionImpl#getActuator <em>Actuator</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class ActionImpl extends MinimalEObjectImpl.Container implements Action {
+public class DigitalActionImpl extends MinimalEObjectImpl.Container implements DigitalAction {
 	/**
 	 * The default value of the '{@link #getBState() <em>BState</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -65,7 +65,7 @@ public class ActionImpl extends MinimalEObjectImpl.Container implements Action {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ActionImpl() {
+	protected DigitalActionImpl() {
 		super();
 	}
 
@@ -76,7 +76,7 @@ public class ActionImpl extends MinimalEObjectImpl.Container implements Action {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return ArduinomlPackage.Literals.ACTION;
+		return ArduinomlPackage.Literals.DIGITAL_ACTION;
 	}
 
 	/**
@@ -97,7 +97,7 @@ public class ActionImpl extends MinimalEObjectImpl.Container implements Action {
 		DigitalBrickState oldBState = bState;
 		bState = newBState == null ? BSTATE_EDEFAULT : newBState;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ArduinomlPackage.ACTION__BSTATE, oldBState, bState));
+			eNotify(new ENotificationImpl(this, Notification.SET, ArduinomlPackage.DIGITAL_ACTION__BSTATE, oldBState, bState));
 	}
 
 	/**
@@ -111,7 +111,7 @@ public class ActionImpl extends MinimalEObjectImpl.Container implements Action {
 			actuator = (Actuator)eResolveProxy(oldActuator);
 			if (actuator != oldActuator) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ArduinomlPackage.ACTION__ACTUATOR, oldActuator, actuator));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ArduinomlPackage.DIGITAL_ACTION__ACTUATOR, oldActuator, actuator));
 			}
 		}
 		return actuator;
@@ -135,7 +135,7 @@ public class ActionImpl extends MinimalEObjectImpl.Container implements Action {
 		Actuator oldActuator = actuator;
 		actuator = newActuator;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ArduinomlPackage.ACTION__ACTUATOR, oldActuator, actuator));
+			eNotify(new ENotificationImpl(this, Notification.SET, ArduinomlPackage.DIGITAL_ACTION__ACTUATOR, oldActuator, actuator));
 	}
 
 	/**
@@ -146,9 +146,9 @@ public class ActionImpl extends MinimalEObjectImpl.Container implements Action {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ArduinomlPackage.ACTION__BSTATE:
+			case ArduinomlPackage.DIGITAL_ACTION__BSTATE:
 				return getBState();
-			case ArduinomlPackage.ACTION__ACTUATOR:
+			case ArduinomlPackage.DIGITAL_ACTION__ACTUATOR:
 				if (resolve) return getActuator();
 				return basicGetActuator();
 		}
@@ -163,10 +163,10 @@ public class ActionImpl extends MinimalEObjectImpl.Container implements Action {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ArduinomlPackage.ACTION__BSTATE:
+			case ArduinomlPackage.DIGITAL_ACTION__BSTATE:
 				setBState((DigitalBrickState)newValue);
 				return;
-			case ArduinomlPackage.ACTION__ACTUATOR:
+			case ArduinomlPackage.DIGITAL_ACTION__ACTUATOR:
 				setActuator((Actuator)newValue);
 				return;
 		}
@@ -181,10 +181,10 @@ public class ActionImpl extends MinimalEObjectImpl.Container implements Action {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ArduinomlPackage.ACTION__BSTATE:
+			case ArduinomlPackage.DIGITAL_ACTION__BSTATE:
 				setBState(BSTATE_EDEFAULT);
 				return;
-			case ArduinomlPackage.ACTION__ACTUATOR:
+			case ArduinomlPackage.DIGITAL_ACTION__ACTUATOR:
 				setActuator((Actuator)null);
 				return;
 		}
@@ -199,9 +199,9 @@ public class ActionImpl extends MinimalEObjectImpl.Container implements Action {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ArduinomlPackage.ACTION__BSTATE:
+			case ArduinomlPackage.DIGITAL_ACTION__BSTATE:
 				return bState != BSTATE_EDEFAULT;
-			case ArduinomlPackage.ACTION__ACTUATOR:
+			case ArduinomlPackage.DIGITAL_ACTION__ACTUATOR:
 				return actuator != null;
 		}
 		return super.eIsSet(featureID);
@@ -223,4 +223,4 @@ public class ActionImpl extends MinimalEObjectImpl.Container implements Action {
 		return result.toString();
 	}
 
-} //ActionImpl
+} //DigitalActionImpl

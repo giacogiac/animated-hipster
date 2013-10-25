@@ -40,7 +40,7 @@ public interface State extends NamedElement {
 
 	/**
 	 * Returns the value of the '<em><b>Actions</b></em>' containment reference list.
-	 * The list contents are of type {@link arduinoml.Action}.
+	 * The list contents are of type {@link arduinoml.DigitalAction}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Actions</em>' containment reference list isn't clear,
@@ -52,6 +52,6 @@ public interface State extends NamedElement {
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<Action> getActions();
+	EList<DigitalAction> getActions();
 
 } // State

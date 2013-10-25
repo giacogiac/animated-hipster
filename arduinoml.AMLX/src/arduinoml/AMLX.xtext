@@ -6,22 +6,22 @@ import "http://www.eclipse.org/emf/2002/Ecore" as ecore
 Machine returns Machine:
 	'Machine'
 	'{'
+		'start' start=[State|EString]
 		('bricks' '{' bricks+=Brick ( "," bricks+=Brick)* '}' )?
 		'states' '{' states+=State ( "," states+=State)* '}' 
-		'start' start=[State|EString]
 	'}';
 
 Brick returns Brick:
-	Brick_Impl | Sensor | Actuator;
+	Sensor | Actuator;
 
-Brick_Impl returns Brick:
-	'Brick'
-	'{'
-		'Name' Name=EString
-		'Pin' Pin=EInt
-	'}';
+
+
+
+
+
 
 State returns State:
+	{State}
 	'State'
 	name=EString
 	'{'
@@ -37,16 +37,16 @@ EInt returns ecore::EInt:
 
 Sensor returns Sensor:
 	'Sensor'
+	name=EString
 	'{'
-		'Name' Name=EString
-		'Pin' Pin=EInt
+		'pin' pin=EInt
 	'}';
 
 Actuator returns Actuator:
 	'Actuator'
+	name=EString
 	'{'
-		'Name' Name=EString
-		'Pin' Pin=EInt
+		'pin' pin=EInt
 	'}';
 
 Transition returns Transition:
@@ -59,16 +59,16 @@ Transition returns Transition:
 Action returns Action:
 	'Action'
 	'{'
-		'BState' BState=BrickState
+		'bState' bState=DigitalBrickState
 		'actuator' actuator=[Actuator|EString]
 	'}';
 
 Condition returns Condition:
 	'Condition'
 	'{'
-		'BState' BState=BrickState
+		'bState' bState=DigitalBrickState
 		'sensor' sensor=[Sensor|EString]
 	'}';
 
-enum BrickState returns BrickState:
-	ON='ON' | OFF='OFF';
+DigitalBrickState returns DigitalBrickState:
+	'DigitalBrickState' /* TODO: implement this rule and an appropriate IValueConverter */;

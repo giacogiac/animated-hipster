@@ -2,8 +2,8 @@
  */
 package arduinoml.impl;
 
-import arduinoml.Action;
 import arduinoml.ArduinomlPackage;
+import arduinoml.DigitalAction;
 import arduinoml.State;
 import arduinoml.Transition;
 
@@ -52,7 +52,7 @@ public class StateImpl extends NamedElementImpl implements State {
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Action> actions;
+	protected EList<DigitalAction> actions;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -90,9 +90,9 @@ public class StateImpl extends NamedElementImpl implements State {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Action> getActions() {
+	public EList<DigitalAction> getActions() {
 		if (actions == null) {
-			actions = new EObjectContainmentEList<Action>(Action.class, this, ArduinomlPackage.STATE__ACTIONS);
+			actions = new EObjectContainmentEList<DigitalAction>(DigitalAction.class, this, ArduinomlPackage.STATE__ACTIONS);
 		}
 		return actions;
 	}
@@ -144,7 +144,7 @@ public class StateImpl extends NamedElementImpl implements State {
 				return;
 			case ArduinomlPackage.STATE__ACTIONS:
 				getActions().clear();
-				getActions().addAll((Collection<? extends Action>)newValue);
+				getActions().addAll((Collection<? extends DigitalAction>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);

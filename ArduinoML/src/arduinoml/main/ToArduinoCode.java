@@ -30,9 +30,9 @@ public class ToArduinoCode extends ArduinomlSwitch<String> {
 			sb.append(" && ");
 			sb.append(doSwitch(i.next()));
 		}
-		sb.append(")\n\t\treturn ");
+		sb.append(")\n\t{\n\t\tprev = millis();\n\t\treturn ");
 		sb.append(object.getGoto().getName());
-		sb.append("();\n");
+		sb.append("();\n\t}\n");
 		return sb.toString();
 	}
 	
@@ -42,9 +42,10 @@ public class ToArduinoCode extends ArduinomlSwitch<String> {
 		sb.append("void ");
 		sb.append(object.getName());
 		sb.append("()\n{\n");
-		for(Action a: object.getActions()) {
+		for(DigitalAction a: object.getActions()) {
 			sb.append(doSwitch(a));
 		}
+		sb.append("\telapsed = millis() - prev;\n");
 		for(Transition t: object.getTransitions()) {
 			sb.append(doSwitch(t));
 		}
@@ -55,18 +56,24 @@ public class ToArduinoCode extends ArduinomlSwitch<String> {
 	}
 
 	@Override
-	public String caseAction(Action object) {
+	public String caseDigitalAction(DigitalAction object) {
 		return "\tdigitalWrite(" + object.getActuator().getPin() + ", " + BStateToString(object.getBState()) + ");\n";
 	}
 
 	@Override
-	public String caseCondition(Condition object) {
+	public String caseDigitalSensorCondition(DigitalSensorCondition object) {
 		return "(digitalRead(" + object.getSensor().getPin() + ") == " + BStateToString(object.getBState()) + ")";
+	}
+	
+	@Override
+	public String caseTimeCondition(TimeCondition object) {
+		return "(elapsed " + comparisonToString(object.getTComp()) + " " + object.getTime() + ")";
 	}
 
 	@Override
 	public String caseMachine(Machine object) {
 		StringBuilder sb = new StringBuilder();
+		sb.append("unsigned long prev;\nunsigned long elapsed;\n\n");
 		sb.append("void setup()\n{\n");
 		for(Brick b: object.getBricks()) {
 			sb.append(doSwitch(b));
@@ -75,7 +82,7 @@ public class ToArduinoCode extends ArduinomlSwitch<String> {
 		for(State s: object.getStates()) {
 			sb.append(doSwitch(s));
 		}
-		sb.append("void loop()\n{\n\treturn ");
+		sb.append("void loop()\n{\n\tprev = millis();\n\treturn ");
 		sb.append(object.getStart().getName());
 		sb.append("();\n}\n");
 		return sb.toString();
@@ -87,6 +94,19 @@ public class ToArduinoCode extends ArduinomlSwitch<String> {
 			return "HIGH";
 		case OFF:
 			return "LOW";
+		default:
+			return null;
+		}
+	}
+	
+	private String comparisonToString(Comparison comp) {
+		switch (comp) {
+		case INFERIOR:
+			return "<";
+		case SUPERIOR:
+			return ">";
+		case EQUAL:
+			return "==";
 		default:
 			return null;
 		}

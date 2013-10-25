@@ -6,22 +6,22 @@ import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Action</b></em>'.
+ * A representation of the model object '<em><b>Digital Action</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link arduinoml.Action#getBState <em>BState</em>}</li>
- *   <li>{@link arduinoml.Action#getActuator <em>Actuator</em>}</li>
+ *   <li>{@link arduinoml.DigitalAction#getBState <em>BState</em>}</li>
+ *   <li>{@link arduinoml.DigitalAction#getActuator <em>Actuator</em>}</li>
  * </ul>
  * </p>
  *
- * @see arduinoml.ArduinomlPackage#getAction()
+ * @see arduinoml.ArduinomlPackage#getDigitalAction()
  * @model
  * @generated
  */
-public interface Action extends EObject {
+public interface DigitalAction extends EObject {
 	/**
 	 * Returns the value of the '<em><b>BState</b></em>' attribute.
 	 * The literals are from the enumeration {@link arduinoml.DigitalBrickState}.
@@ -34,14 +34,14 @@ public interface Action extends EObject {
 	 * @return the value of the '<em>BState</em>' attribute.
 	 * @see arduinoml.DigitalBrickState
 	 * @see #setBState(DigitalBrickState)
-	 * @see arduinoml.ArduinomlPackage#getAction_BState()
+	 * @see arduinoml.ArduinomlPackage#getDigitalAction_BState()
 	 * @model required="true"
 	 * @generated
 	 */
 	DigitalBrickState getBState();
 
 	/**
-	 * Sets the value of the '{@link arduinoml.Action#getBState <em>BState</em>}' attribute.
+	 * Sets the value of the '{@link arduinoml.DigitalAction#getBState <em>BState</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>BState</em>' attribute.
@@ -61,14 +61,14 @@ public interface Action extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Actuator</em>' reference.
 	 * @see #setActuator(Actuator)
-	 * @see arduinoml.ArduinomlPackage#getAction_Actuator()
+	 * @see arduinoml.ArduinomlPackage#getDigitalAction_Actuator()
 	 * @model required="true"
 	 * @generated
 	 */
 	Actuator getActuator();
 
 	/**
-	 * Sets the value of the '{@link arduinoml.Action#getActuator <em>Actuator</em>}' reference.
+	 * Sets the value of the '{@link arduinoml.DigitalAction#getActuator <em>Actuator</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Actuator</em>' reference.
@@ -77,4 +77,4 @@ public interface Action extends EObject {
 	 */
 	void setActuator(Actuator value);
 
-} // Action
+} // DigitalAction

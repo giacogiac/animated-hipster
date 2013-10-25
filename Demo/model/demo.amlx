@@ -1,8 +1,6 @@
 Machine{
+	start state1
 	states{
-		State {
-			Name hello
-		}
+		State state1 {}
 	}
-	start 
 }

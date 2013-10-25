@@ -62,8 +62,9 @@ public class ArduinomlFactoryImpl extends EFactoryImpl implements ArduinomlFacto
 			case ArduinomlPackage.SENSOR: return createSensor();
 			case ArduinomlPackage.ACTUATOR: return createActuator();
 			case ArduinomlPackage.TRANSITION: return createTransition();
-			case ArduinomlPackage.CONDITION: return createCondition();
-			case ArduinomlPackage.ACTION: return createAction();
+			case ArduinomlPackage.DIGITAL_SENSOR_CONDITION: return createDigitalSensorCondition();
+			case ArduinomlPackage.DIGITAL_ACTION: return createDigitalAction();
+			case ArduinomlPackage.TIME_CONDITION: return createTimeCondition();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -79,6 +80,8 @@ public class ArduinomlFactoryImpl extends EFactoryImpl implements ArduinomlFacto
 		switch (eDataType.getClassifierID()) {
 			case ArduinomlPackage.DIGITAL_BRICK_STATE:
 				return createDigitalBrickStateFromString(eDataType, initialValue);
+			case ArduinomlPackage.COMPARISON:
+				return createComparisonFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -94,6 +97,8 @@ public class ArduinomlFactoryImpl extends EFactoryImpl implements ArduinomlFacto
 		switch (eDataType.getClassifierID()) {
 			case ArduinomlPackage.DIGITAL_BRICK_STATE:
 				return convertDigitalBrickStateToString(eDataType, instanceValue);
+			case ArduinomlPackage.COMPARISON:
+				return convertComparisonToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -154,9 +159,9 @@ public class ArduinomlFactoryImpl extends EFactoryImpl implements ArduinomlFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Condition createCondition() {
-		ConditionImpl condition = new ConditionImpl();
-		return condition;
+	public DigitalSensorCondition createDigitalSensorCondition() {
+		DigitalSensorConditionImpl digitalSensorCondition = new DigitalSensorConditionImpl();
+		return digitalSensorCondition;
 	}
 
 	/**
@@ -164,9 +169,19 @@ public class ArduinomlFactoryImpl extends EFactoryImpl implements ArduinomlFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Action createAction() {
-		ActionImpl action = new ActionImpl();
-		return action;
+	public DigitalAction createDigitalAction() {
+		DigitalActionImpl digitalAction = new DigitalActionImpl();
+		return digitalAction;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public TimeCondition createTimeCondition() {
+		TimeConditionImpl timeCondition = new TimeConditionImpl();
+		return timeCondition;
 	}
 
 	/**
@@ -186,6 +201,26 @@ public class ArduinomlFactoryImpl extends EFactoryImpl implements ArduinomlFacto
 	 * @generated
 	 */
 	public String convertDigitalBrickStateToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Comparison createComparisonFromString(EDataType eDataType, String initialValue) {
+		Comparison result = Comparison.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertComparisonToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 
