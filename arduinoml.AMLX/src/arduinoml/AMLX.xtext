@@ -14,11 +14,8 @@ Machine returns Machine:
 Brick returns Brick:
 	Sensor | Actuator;
 
-
-
-
-
-
+Condition returns Condition:
+	DigitalSensorCondition | TimeCondition;
 
 State returns State:
 	{State}
@@ -26,7 +23,7 @@ State returns State:
 	name=EString
 	'{'
 		('transitions' '{' transitions+=Transition ( "," transitions+=Transition)* '}' )?
-		('actions' '{' actions+=Action ( "," actions+=Action)* '}' )?
+		('actions' '{' actions+=DigitalAction ( "," actions+=DigitalAction)* '}' )?
 	'}';
 
 EString returns ecore::EString:
@@ -56,19 +53,29 @@ Transition returns Transition:
 		'conditions' '{' conditions+=Condition ( "," conditions+=Condition)* '}' 
 	'}';
 
-Action returns Action:
-	'Action'
+DigitalAction returns DigitalAction:
+	'DigitalAction'
 	'{'
 		'bState' bState=DigitalBrickState
 		'actuator' actuator=[Actuator|EString]
 	'}';
 
-Condition returns Condition:
-	'Condition'
+DigitalSensorCondition returns DigitalSensorCondition:
+	'DigitalSensorCondition'
 	'{'
 		'bState' bState=DigitalBrickState
 		'sensor' sensor=[Sensor|EString]
 	'}';
 
-DigitalBrickState returns DigitalBrickState:
-	'DigitalBrickState' /* TODO: implement this rule and an appropriate IValueConverter */;
+TimeCondition returns TimeCondition:
+	'TimeCondition'
+	'{'
+		'time' time=EInt
+		'tComp' tComp=Comparison
+	'}';
+
+enum DigitalBrickState returns DigitalBrickState:
+	ON = "ON" | OFF = "OFF";
+
+enum Comparison returns Comparison:
+	SUPERIOR = ">" | INFERIOR = "<" | EQUAL = "=";

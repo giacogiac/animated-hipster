@@ -2,8 +2,6 @@ package arduinoml.main;
 
 import java.util.Iterator;
 
-import org.eclipse.emf.ecore.EObject;
-
 import arduinoml.*;
 import arduinoml.util.ArduinomlSwitch;
 

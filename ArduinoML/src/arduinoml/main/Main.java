@@ -11,7 +11,7 @@ import arduinoml.*;
 public class Main {
 
 	public static void main(String[] args) {
-		Machine my = LoadModel("model/yannBUZZ.xmi");
+		Machine my = LoadModel("model/LevelCrossing.xmi");
 		ToArduinoCode sketch = new ToArduinoCode();
 		System.out.println(sketch.doSwitch(my));
 	}

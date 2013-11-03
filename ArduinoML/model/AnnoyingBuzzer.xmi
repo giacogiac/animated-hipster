@@ -20,7 +20,7 @@
   </states>
   <states name="on">
     <transitions
-        goto="state3">
+        goto="beforeOff">
       <conditions
           xsi:type="arduinoml:TimeCondition"
           time="100"/>
@@ -29,9 +29,9 @@
         bState="ON"
         actuator="buzzer"/>
   </states>
-  <states name="state3">
+  <states name="beforeOff">
     <transitions
-        goto="state4">
+        goto="beforeOn">
       <conditions
           xsi:type="arduinoml:TimeCondition"
           time="100"/>
@@ -39,7 +39,7 @@
     <actions
         actuator="buzzer"/>
   </states>
-  <states name="state4">
+  <states name="beforeOn">
     <transitions
         goto="off">
       <conditions
