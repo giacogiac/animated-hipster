@@ -1,0 +1,151 @@
+Machine{
+	start Red
+	bricks{
+		Actuator RedLight{
+			pin 9
+		},
+		Actuator GreenLight{
+			pin 10
+		},
+		Actuator AlarmSignal{ 
+			pin 11
+		},
+		Sensor AlarmButton{
+			pin 12
+		}
+	}
+	states {
+		State Green {
+			transitions{
+				Transition{
+					goto Red
+					conditions{
+						DigitalSensorCondition {
+							bState OFF
+							sensor AlarmButton
+						},
+						TimeCondition{
+							time 300
+							tComp >
+						}
+					}
+				},
+				Transition{
+					goto Alarm
+					conditions{
+						DigitalSensorCondition {
+							bState ON
+							sensor AlarmButton
+						},
+						TimeCondition{
+							time 300
+							tComp >
+						}
+					}
+				}
+			}
+			actions {
+				DigitalAction {
+					bState ON
+					actuator GreenLight
+				},
+				DigitalAction {
+					bState OFF
+					actuator RedLight
+				},
+				DigitalAction {
+					bState OFF
+					actuator AlarmSignal
+				}
+			}
+		},
+		State Red {
+			transitions{
+				Transition{
+					goto Alarm
+					conditions{
+						DigitalSensorCondition {
+							bState OFF
+							sensor AlarmButton
+						},
+						TimeCondition{
+							time 300
+							tComp >
+						}
+					}
+				},
+				Transition{
+					goto Green
+					conditions{
+						DigitalSensorCondition {
+							bState ON
+							sensor AlarmButton
+						},
+						TimeCondition{
+							time 300
+							tComp >
+						}
+					}
+				}
+			}
+			actions {
+				DigitalAction {
+					bState OFF
+					actuator GreenLight
+				},
+				DigitalAction {
+					bState ON
+					actuator RedLight
+				},
+				DigitalAction {
+					bState OFF
+					actuator AlarmSignal
+				}
+			}
+		},
+		State Alarm {
+			transitions{
+				Transition{
+					goto Green
+					conditions{
+						DigitalSensorCondition {
+							bState OFF
+							sensor AlarmButton
+						},
+						TimeCondition{
+							time 300
+							tComp >
+						}
+					}
+				},
+				Transition{
+					goto Red
+					conditions{
+						DigitalSensorCondition {
+							bState ON
+							sensor AlarmButton
+						},
+						TimeCondition{
+							time 300
+							tComp >
+						}
+					}
+				}
+			}
+			actions {
+				DigitalAction {
+					bState OFF
+					actuator GreenLight
+				},
+				DigitalAction {
+					bState OFF
+					actuator RedLight
+				},
+				DigitalAction {
+					bState ON
+					actuator AlarmSignal
+				}
+			}
+		}
+	}
+}

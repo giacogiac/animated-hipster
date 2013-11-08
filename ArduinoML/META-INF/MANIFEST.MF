@@ -9,7 +9,6 @@ Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Export-Package: arduinoml,
  arduinoml.impl,
- arduinoml.main,
  arduinoml.util
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore,

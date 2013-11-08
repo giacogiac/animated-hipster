@@ -1,0 +1,208 @@
+Machine {
+	start Open
+	bricks{
+		Sensor Barrier{ 
+			pin 8
+		},
+		Actuator RedLight{
+			pin 9  
+		},
+		Actuator GreenLight{ 
+			pin 10
+		},
+		Actuator AlarmSignal{
+			pin 11
+		},
+		Sensor AlarmButton{
+			pin 12
+		}
+	}
+	states {
+		State Open {
+			transitions {
+				Transition {
+					goto Close
+					conditions {
+						DigitalSensorCondition{
+							bState OFF
+							sensor Barrier
+						}
+					}
+				},
+				Transition {
+					goto AlarmRed
+					conditions {
+						DigitalSensorCondition{
+							bState ON
+							sensor AlarmButton
+						} 
+					}
+				}
+			}
+			actions {
+				DigitalAction {
+					bState OFF
+					actuator RedLight
+				},
+				DigitalAction{
+					bState ON
+					actuator RedLight
+				},
+				DigitalAction{
+					bState OFF
+					actuator AlarmSignal
+				}		
+			}
+		},
+		State Close {
+			transitions {
+				Transition {
+					goto Open
+					conditions {
+						DigitalSensorCondition{
+							bState ON
+							sensor Barrier
+						}
+					}
+				},
+				Transition {
+					goto AlarmGreen
+					conditions {
+						DigitalSensorCondition{
+							bState ON
+							sensor AlarmButton
+						}
+					}
+				}
+			}
+			actions {
+				DigitalAction {
+					bState ON
+					actuator RedLight
+				},
+				DigitalAction{
+					bState OFF
+					actuator GreenLight
+				},
+				DigitalAction{
+					bState OFF
+					actuator AlarmSignal
+				}		
+			}
+		},
+		State AlarmGreen {
+			transitions {
+				Transition {
+					goto Close
+					conditions {
+						DigitalSensorCondition{
+							bState OFF
+							sensor AlarmButton
+						},
+						DigitalSensorCondition{
+							bState OFF
+							sensor Barrier
+						}
+					}
+				},
+				Transition {
+					goto Open
+					conditions {
+						DigitalSensorCondition{
+							bState OFF
+							sensor AlarmButton
+						},
+						DigitalSensorCondition{
+							bState ON
+							sensor Barrier
+						}
+					}
+				},
+				Transition {
+					goto AlarmRed
+					conditions {
+						DigitalSensorCondition{
+							bState ON
+							sensor AlarmButton
+						},
+						TimeCondition{
+							time 500
+							tComp >
+						}
+					}
+				}
+			}
+			actions {
+				DigitalAction {
+					bState OFF
+					actuator RedLight
+				},
+				DigitalAction{
+					bState ON
+					actuator GreenLight
+				},
+				DigitalAction{
+					bState ON
+					actuator AlarmSignal
+				}		
+			}
+		},
+		State AlarmRed {
+			transitions {
+				Transition {
+					goto Close
+					conditions {
+						DigitalSensorCondition{
+							bState OFF
+							sensor AlarmButton
+						},
+						DigitalSensorCondition{
+							bState OFF
+							sensor Barrier
+						}
+					}
+				},
+				Transition {
+					goto Open
+					conditions {
+						DigitalSensorCondition{
+							bState OFF
+							sensor AlarmButton
+						},
+						DigitalSensorCondition{
+							bState ON
+							sensor Barrier
+						}
+					}
+				},
+				Transition {
+					goto AlarmGreen
+					conditions {
+						DigitalSensorCondition{
+							bState ON
+							sensor AlarmButton
+						},
+						TimeCondition{
+							time 500
+							tComp >
+						}
+					}
+				}
+			}
+			actions {
+				DigitalAction {
+					bState ON
+					actuator RedLight
+				},
+				DigitalAction{
+					bState OFF
+					actuator GreenLight
+				},
+				DigitalAction{
+					bState ON
+					actuator AlarmSignal
+				}		
+			}
+		}
+	}
+}
