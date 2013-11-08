@@ -71,6 +71,9 @@ class AMLXGenerator implements IGenerator {
 	'''
 	
 	def compile(State s) '''
+		«FOR e : s.eClass.EAllStructuralFeatures»
+			«e.featureID» «e.toString» «e.name»
+		«ENDFOR»
 		void «s.name»()
 		{
 			«FOR a : s.actions»
@@ -114,7 +117,7 @@ class AMLXGenerator implements IGenerator {
 	'''
 	
 	def compile(DigitalSensorCondition dc) '''
-		(digitalRead(«dc.sensor.pin») == «dc.BState»)
+		(digitalRead(«dc.sensor.pin») == «dc.BState.compile»)
 	'''
 	
 	def compile(TimeCondition tc) '''
