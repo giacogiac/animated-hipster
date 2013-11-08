@@ -1,5 +1,4 @@
 /bin
-/src/arduinoml/*
-!/src/arduinoml/*/
-/src/arduinoml/impl/*
-/src/arduinoml/util/*
+/src/arduinoml/*.java
+/src/arduinoml/impl/*.java
+/src/arduinoml/util/*.java
