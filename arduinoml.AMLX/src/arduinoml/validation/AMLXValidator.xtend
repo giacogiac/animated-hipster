@@ -4,7 +4,6 @@
 package arduinoml.validation
 
 import org.eclipse.xtext.validation.Check
-import arduinoml.State
 import arduinoml.Machine
 
 /**
@@ -14,9 +13,9 @@ import arduinoml.Machine
  */
 class AMLXValidator extends AbstractAMLXValidator {
 
-//	@Check
-//	def checkGreetingStartsWithCapital(Machine m) {
-//		if (!m.start.name.equals("ybwb"))
-//			 warning("You better work bitch!!", m.start, m.start.eClass.);
-//	}
+	@Check
+	def checkGreetingStartsWithCapital(Machine m) {
+		if (!m.start.name.equals("ybwb"))
+			 warning("You better work bitch!!", m.start, m.start.eClass.getEStructuralFeature("name"));
+	}
 }
