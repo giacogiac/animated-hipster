@@ -1,3 +1,4 @@
 /bin
 /src/arduinioml/*
-!/src/arduinoml/main
+/src/arduinioml/impl/*
+/src/arduinioml/util/*
