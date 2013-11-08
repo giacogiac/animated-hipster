@@ -21,6 +21,12 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="start" lowerBound="1" eType="#//State"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="State" eSuperTypes="#//NamedElement">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="UniquePinAction"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+      <details key="UniquePinAction" value="&#xA;&#x9;&#x9;&#x9;actions.allInstances()->one(a | a.actuator.pin)"/>
+    </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="transitions" upperBound="-1"
         eType="#//Transition" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="actions" upperBound="-1"
