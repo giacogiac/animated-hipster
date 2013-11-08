@@ -9,7 +9,7 @@ Machine {
 		},
 		Actuator GreenLight{ 
 			pin 10
-		},
+		}, 
 		Actuator AlarmSignal{
 			pin 11
 		},
