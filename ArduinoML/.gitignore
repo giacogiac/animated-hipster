@@ -2,3 +2,4 @@
 /src/arduinoml/*
 /src/arduinoml/impl/*
 /src/arduinoml/util/*
+!/src/arduinoml/main/*
