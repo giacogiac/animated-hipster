@@ -1,6 +1,0 @@
-Machine{
-	start state1
-	states{
-		State state1 {}
-	}
-}

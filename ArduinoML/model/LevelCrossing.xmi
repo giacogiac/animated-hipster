@@ -36,7 +36,7 @@
     </transitions>
     <actions
         bState="ON"
-        actuator="GreenLight"/>
+        actuator="RedLight"/>
     <actions
         actuator="RedLight"/>
     <actions
@@ -61,7 +61,7 @@
         bState="ON"
         actuator="RedLight"/>
     <actions
-        actuator="GreenLight"/>
+        actuator="RedLight"/>
     <actions
         actuator="AlarmSignal"/>
   </states>
@@ -87,7 +87,7 @@
         actuator="AlarmSignal"/>
     <actions
         bState="ON"
-        actuator="GreenLight"/>
+        actuator="RedLight"/>
     <actions
         bState="ON"
         actuator="RedLight"/>
@@ -116,6 +116,6 @@
         bState="ON"
         actuator="RedLight"/>
     <actions
-        actuator="GreenLight"/>
+        actuator="RedLight"/>
   </states>
 </arduinoml:Machine>

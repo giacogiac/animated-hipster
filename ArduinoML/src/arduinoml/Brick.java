@@ -17,6 +17,8 @@ package arduinoml;
  *
  * @see arduinoml.ArduinomlPackage#getBrick()
  * @model abstract="true"
+ *        annotation="http://www.eclipse.org/emf/2002/Ecore constraints='PinNumber UniquePin'"
+ *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot PinNumber='\n\t\t\tself.pin >= 8 and self.pin <= 12' UniquePin='\n\t\t\tBrick.allInstances()->one(b | b.pin = self.pin)'"
  * @generated
  */
 public interface Brick extends NamedElement {
