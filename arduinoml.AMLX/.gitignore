@@ -1,6 +1,3 @@
 /bin
-/src/arduinoml/*
-!/src/arduinoml/AMLX.xtext
-!/src/arduinoml/GenerateAMLX.mwe2
-!/src/arduinoml/AMLXStandaloneSetup.java
-!/src/arduinoml/AMLXRuntimeModule.java
+/src-gen
+/xtend-gen
