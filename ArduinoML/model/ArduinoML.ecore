@@ -13,14 +13,14 @@
     <eLiterals name="OFF"/>
     <eLiterals name="ON" value="1"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Machine">
+  <eClassifiers xsi:type="ecore:EClass" name="AMLMachine">
     <eStructuralFeatures xsi:type="ecore:EReference" name="bricks" upperBound="-1"
         eType="#//Brick" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="states" lowerBound="1"
-        upperBound="-1" eType="#//State" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="start" lowerBound="1" eType="#//State"/>
+        upperBound="-1" eType="#//AMLState" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="start" lowerBound="1" eType="#//AMLState"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="State" eSuperTypes="#//NamedElement">
+  <eClassifiers xsi:type="ecore:EClass" name="AMLState" eSuperTypes="#//NamedElement">
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
       <details key="constraints" value="UniqueActionBrick"/>
     </eAnnotations>
@@ -45,7 +45,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="Sensor" eSuperTypes="#//Brick"/>
   <eClassifiers xsi:type="ecore:EClass" name="Actuator" eSuperTypes="#//Brick"/>
   <eClassifiers xsi:type="ecore:EClass" name="Transition">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="goto" lowerBound="1" eType="#//State"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="goto" lowerBound="1" eType="#//AMLState"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="conditions" lowerBound="1"
         upperBound="-1" eType="#//Condition" containment="true"/>
   </eClassifiers>

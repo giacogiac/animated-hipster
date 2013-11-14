@@ -32,7 +32,7 @@
       <styles xmi:type="notation:FilteringStyle" xmi:id="_LHvJ8zPuEeOWWpfQukJaBw"/>
     </children>
     <styles xmi:type="notation:ShapeStyle" xmi:id="_LHtUwTPuEeOWWpfQukJaBw" fontColor="4210752" fontName="Segoe UI" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
-    <element xmi:type="ecore:EClass" href="ArduinoML.ecore#//Machine"/>
+    <element xmi:type="ecore:EClass" href="ArduinoML.ecore#//AMLMachine"/>
     <layoutConstraint xmi:type="notation:Bounds" xmi:id="_LHtUwjPuEeOWWpfQukJaBw" x="612" y="106"/>
   </children>
   <children xmi:type="notation:Node" xmi:id="_NUU9UDPuEeOWWpfQukJaBw" type="1001">
@@ -48,7 +48,7 @@
       <styles xmi:type="notation:FilteringStyle" xmi:id="_NUWygzPuEeOWWpfQukJaBw"/>
     </children>
     <styles xmi:type="notation:ShapeStyle" xmi:id="_NUU9UTPuEeOWWpfQukJaBw" fontColor="4210752" fontName="Segoe UI" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
-    <element xmi:type="ecore:EClass" href="ArduinoML.ecore#//State"/>
+    <element xmi:type="ecore:EClass" href="ArduinoML.ecore#//AMLState"/>
     <layoutConstraint xmi:type="notation:Bounds" xmi:id="_NUU9UjPuEeOWWpfQukJaBw" x="602" y="441"/>
   </children>
   <children xmi:type="notation:Node" xmi:id="_SvnhUDPuEeOWWpfQukJaBw" type="1001">
@@ -279,7 +279,7 @@
     </children>
     <styles xmi:type="notation:ConnectorStyle" xmi:id="_y3WSwTPuEeOWWpfQukJaBw" lineColor="4210752"/>
     <styles xmi:type="notation:FontStyle" xmi:id="_y3WSwjPuEeOWWpfQukJaBw" fontColor="4210752" fontName="Segoe UI" fontHeight="10"/>
-    <element xmi:type="ecore:EReference" href="ArduinoML.ecore#//Machine/bricks"/>
+    <element xmi:type="ecore:EReference" href="ArduinoML.ecore#//AMLMachine/bricks"/>
     <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_y3WSwzPuEeOWWpfQukJaBw" points="[-14, 2, 259, -30]$[-216, 23, 57, -9]"/>
     <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_y3dngDPuEeOWWpfQukJaBw" id="(0.14705882352941177,0.13953488372093023)"/>
   </edges>
@@ -292,7 +292,7 @@
     </children>
     <styles xmi:type="notation:ConnectorStyle" xmi:id="_4NvvsTPuEeOWWpfQukJaBw" lineColor="4210752"/>
     <styles xmi:type="notation:FontStyle" xmi:id="_4NvvsjPuEeOWWpfQukJaBw" fontColor="4210752" fontName="Segoe UI" fontHeight="10"/>
-    <element xmi:type="ecore:EReference" href="ArduinoML.ecore#//Machine/states"/>
+    <element xmi:type="ecore:EReference" href="ArduinoML.ecore#//AMLMachine/states"/>
     <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_4NvvszPuEeOWWpfQukJaBw" points="[3, 7, 1, -298]$[3, 301, 1, -4]"/>
     <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_4N2dYDPuEeOWWpfQukJaBw" id="(0.0784313725490196,0.8372093023255814)"/>
     <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_4N2dYTPuEeOWWpfQukJaBw" id="(0.17391304347826086,0.09803921568627451)"/>
@@ -306,7 +306,7 @@
     </children>
     <styles xmi:type="notation:ConnectorStyle" xmi:id="_8UWYsTPuEeOWWpfQukJaBw" lineColor="4210752"/>
     <styles xmi:type="notation:FontStyle" xmi:id="_8UWYsjPuEeOWWpfQukJaBw" fontColor="4210752" fontName="Segoe UI" fontHeight="10"/>
-    <element xmi:type="ecore:EReference" href="ArduinoML.ecore#//Machine/start"/>
+    <element xmi:type="ecore:EReference" href="ArduinoML.ecore#//AMLMachine/start"/>
     <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_8UWYszPuEeOWWpfQukJaBw" points="[5, 8, 2, -298]$[5, 302, 2, -4]"/>
     <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_8UdGYDPuEeOWWpfQukJaBw" id="(0.7647058823529411,0.813953488372093)"/>
     <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_8UdtcDPuEeOWWpfQukJaBw" id="(0.7913043478260869,0.09803921568627451)"/>
@@ -320,7 +320,7 @@
     </children>
     <styles xmi:type="notation:ConnectorStyle" xmi:id="_Ate8ITPvEeOWWpfQukJaBw" lineColor="4210752"/>
     <styles xmi:type="notation:FontStyle" xmi:id="_Ate8IjPvEeOWWpfQukJaBw" fontColor="4210752" fontName="Segoe UI" fontHeight="10"/>
-    <element xmi:type="ecore:EReference" href="ArduinoML.ecore#//State/transitions"/>
+    <element xmi:type="ecore:EReference" href="ArduinoML.ecore#//AMLState/transitions"/>
     <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_Ate8IzPvEeOWWpfQukJaBw" points="[-4, 0, 418, 2]$[-420, 4, 2, 6]"/>
     <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_AtnfADPvEeOWWpfQukJaBw" id="(0.043478260869565216,0.7647058823529411)"/>
     <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_AtnfATPvEeOWWpfQukJaBw" id="(0.6274509803921569,0.8604651162790697)"/>
@@ -361,7 +361,7 @@
     </children>
     <styles xmi:type="notation:ConnectorStyle" xmi:id="_MBcjsTPvEeOWWpfQukJaBw" lineColor="4210752"/>
     <styles xmi:type="notation:FontStyle" xmi:id="_MBcjsjPvEeOWWpfQukJaBw" fontColor="4210752" fontName="Segoe UI" fontHeight="10"/>
-    <element xmi:type="ecore:EReference" href="ArduinoML.ecore#//State/actions"/>
+    <element xmi:type="ecore:EReference" href="ArduinoML.ecore#//AMLState/actions"/>
     <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_MBcjszPvEeOWWpfQukJaBw" points="[-5, -3, 100, 54]$[-103, -48, 2, 9]"/>
     <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_MBjRYDPvEeOWWpfQukJaBw" id="(0.05217391304347826,0.058823529411764705)"/>
     <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_MBjRYTPvEeOWWpfQukJaBw" id="(0.6074074074074074,0.8235294117647058)"/>
