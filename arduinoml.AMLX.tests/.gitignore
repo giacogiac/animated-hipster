@@ -2,4 +2,3 @@
 /src-gen/*
 /xtend-gen/*
 !*/.folder
-!*/.folder-gen

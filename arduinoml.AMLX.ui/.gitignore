@@ -1,5 +1,3 @@
 /bin
-/src-gen/*
-/xtend-gen/*
-!*/.folder
-!*/.folder-gen
+/src-gen
+/xtend-gen
