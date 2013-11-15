@@ -45,6 +45,18 @@
   <eClassifiers xsi:type="ecore:EClass" name="Sensor" eSuperTypes="#//Brick"/>
   <eClassifiers xsi:type="ecore:EClass" name="Actuator" eSuperTypes="#//Brick"/>
   <eClassifiers xsi:type="ecore:EClass" name="Transition">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="UniqueDigitalConditionBrick InvalidTimeConditions"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+      <details key="UniqueDigitalConditionBrick" value="&#xA;&#x9;&#x9;&#x9;conditions->select(c | c.oclIsTypeOf(DigitalSensorCondition))->isUnique(dsc : DigitalSensorCondition | dsc.sensor.pin)"/>
+      <details key="InvalidTimeConditions" value="&#xA;&#x9;&#x9;&#x9;getTimeConditions()->size() &lt;= 1&#xA;&#x9;&#x9;&#x9;or (getTimeConditions()->size() = 2&#xA;&#x9;&#x9;&#x9;and getTimeConditions()->one(tc : TimeCondition | tc.tComp = Comparison::SUPERIOR)&#xA;&#x9;&#x9;&#x9;and getTimeConditions()->one(tc : TimeCondition | tc.tComp = Comparison::INFERIOR)&#xA;&#x9;&#x9;&#x9;and getTimeConditions()->select(tc : TimeCondition | tc.tComp = Comparison::SUPERIOR)->first().time&#xA;&#x9;&#x9;&#x9;&#x9;&lt; getTimeConditions()->select(tc : TimeCondition | tc.tComp = Comparison::INFERIOR)->first().time)"/>
+    </eAnnotations>
+    <eOperations name="getTimeConditions" unique="false" upperBound="-1" eType="#//TimeCondition">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+        <details key="body" value="conditions->select(c | c.oclIsTypeOf(TimeCondition))->asSequence()"/>
+      </eAnnotations>
+    </eOperations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="goto" lowerBound="1" eType="#//AMLState"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="conditions" lowerBound="1"
         upperBound="-1" eType="#//Condition" containment="true"/>

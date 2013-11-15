@@ -52,11 +52,7 @@ class AMLXGenerator implements IGenerator {
 	'''
 	
 	def compile(Brick b) '''
-		«IF Sensor.isInstance(b)»
-			«Sensor.cast(b).compile»
-		«ELSEIF Actuator.isInstance(b)»
-			«Actuator.cast(b).compile»
-		«ENDIF»
+		«IF Sensor.isInstance(b)»«Sensor.cast(b).compile»«ELSEIF Actuator.isInstance(b)»«Actuator.cast(b).compile»«ENDIF»
 	'''
 	
 	def compile(Sensor s) '''
@@ -68,9 +64,6 @@ class AMLXGenerator implements IGenerator {
 	'''
 	
 	def compile(AMLState s) '''
-		«FOR e : s.eClass.EAllStructuralFeatures»
-			«e.featureID» «e.toString» «e.name»
-		«ENDFOR»
 		void «s.name»()
 		{
 			«FOR a : s.actions»
@@ -90,11 +83,7 @@ class AMLXGenerator implements IGenerator {
 	'''
 	
 	def compile(DigitalBrickState dbs) '''
-		«IF dbs == DigitalBrickState.ON»
-			HIGH
-		«ELSEIF dbs == DigitalBrickState.OFF»
-			LOW
-		«ENDIF»
+		«IF dbs == DigitalBrickState.ON»HIGH«ELSEIF dbs == DigitalBrickState.OFF»LOW«ENDIF»
 	'''
 	
 	def compile(Transition t) '''
@@ -106,11 +95,7 @@ class AMLXGenerator implements IGenerator {
 	'''
 	
 	def compile(Condition c) '''
-		«IF DigitalSensorCondition.isInstance(c)»
-			«DigitalSensorCondition.cast(c).compile»
-		«ELSEIF TimeCondition.isInstance(c)»
-			«TimeCondition.cast(c).compile»
-		«ENDIF»
+		«IF DigitalSensorCondition.isInstance(c)»«DigitalSensorCondition.cast(c).compile»«ELSEIF TimeCondition.isInstance(c)»«TimeCondition.cast(c).compile»«ENDIF»
 	'''
 	
 	def compile(DigitalSensorCondition dc) '''
@@ -122,30 +107,22 @@ class AMLXGenerator implements IGenerator {
 	'''
 	
 	def compile(Comparison c) '''
-		«IF c == Comparison.INFERIOR»
-			<
-		«ELSEIF c == Comparison.SUPERIOR»
-			>
-		«ELSEIF c == Comparison.EQUAL»
-			==
-		«ENDIF»
+		«IF c == Comparison.INFERIOR»<«ELSEIF c == Comparison.SUPERIOR»>«ELSEIF c == Comparison.EQUAL»==«ENDIF»
 	'''
 	
 	def blueprint(AMLMachine m) '''
-		           
-		           
-		           
-		            ---------------
-		           |       a       | ----- D12. «m.bricks.findFirst[it.pin == 12].name»
-		           |       r       | 
-		           |       d       | ----- D11. «m.bricks.findFirst[it.pin == 11].name»
-		           |       u       | 
-		           |       i       | ----- D10. «m.bricks.findFirst[it.pin == 10].name»
-		           |       n       | 
-		           |       o       | ------ D9. «m.bricks.findFirst[it.pin == 9].name»
-		           |       M       | 
-		           |       L       | ------ D8. «m.bricks.findFirst[it.pin == 8].name»
-		            ---------------
-		           
+	    _______________
+	   /               \
+	   |       a      [| ----- D12. «IF m.bricks.exists[it.pin == 12]»«m.bricks.findFirst[it.pin == 12].name»«ENDIF»
+	   |       r       | 
+	   |       d      [| ----- D11. «IF m.bricks.exists[it.pin == 11]»«m.bricks.findFirst[it.pin == 11].name»«ENDIF»
+	   |       u       | 
+	   |       i      [| ----- D10. «IF m.bricks.exists[it.pin == 10]»«m.bricks.findFirst[it.pin == 10].name»«ENDIF»
+	   |       n       | 
+	   |       o      [| ------ D9. «IF m.bricks.exists[it.pin == 9]»«m.bricks.findFirst[it.pin == 9].name»«ENDIF»
+	   |       M       | 
+	   |       L      [| ------ D8. «IF m.bricks.exists[it.pin == 8]»«m.bricks.findFirst[it.pin == 8].name»«ENDIF»
+	   \_______________/
+	   
 	'''
 }

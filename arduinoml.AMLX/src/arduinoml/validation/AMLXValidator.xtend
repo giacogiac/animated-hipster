@@ -5,6 +5,12 @@ package arduinoml.validation
 
 import org.eclipse.xtext.validation.Check
 import arduinoml.AMLMachine
+import arduinoml.TimeCondition
+import arduinoml.Comparison
+import arduinoml.AMLState
+import arduinoml.Transition
+import java.util.List
+import java.util.ArrayList
 
 /**
  * Custom validation rules. 
@@ -14,8 +20,46 @@ import arduinoml.AMLMachine
 class AMLXValidator extends AbstractAMLXValidator {
 
 	@Check
-	def checkGreetingStartsWithCapital(AMLMachine m) {
+	def checkYouBetterWorkBitch(AMLMachine m) {
 		if (!m.start.name.equals("ybwb"))
-			 warning("You better work bitch!!", m.start, m.start.eClass.getEStructuralFeature("name"));
+			 warning("You better work bitch!!", m.eClass.getEStructuralFeature("start"));
 	}
+	
+	@Check
+	def checkTimeConditionNotEqual(TimeCondition c) {
+		if (c.TComp == Comparison.EQUAL)
+			warning("Equality on time condition is highly unrecomended", c.eClass.getEStructuralFeature("tComp"));
+	}
+	
+	@Check
+	def checkSinkState(AMLState s) {
+		for(Transition t : s.transitions) {
+			if(t.conditions.exists[TimeCondition.isInstance(it) || TimeCondition.cast(it).TComp == Comparison.SUPERIOR])
+				return;
+		}
+		if (s.transitions.empty)
+			warning("You never escape from that state", s.eClass.getEStructuralFeature("name"));
+		warning("You may never escape from that state", s.eClass.getEStructuralFeature("name"));
+	}
+	
+	/* * /
+	@Check
+	def checkUnreacheableState(AMLMachine m) {
+		var List<AMLState> reached = new ArrayList<AMLState>();
+		checkUnreacheableStateRecursive(m.start, reached);
+		for (AMLState s : m.states) {
+			if(!reached.contains(s))
+				warning("This state is never reached", s, s.eClass.getEStructuralFeature("name"));
+		}
+	}
+	
+	def void checkUnreacheableStateRecursive(AMLState s, List<AMLState> reached) {
+		if (!reached.contains(s)) {
+			reached.add(s);
+			for (Transition t : s.transitions) {
+				checkUnreacheableStateRecursive(t.goto, reached);
+			}
+		}
+	}
+	/* */
 }

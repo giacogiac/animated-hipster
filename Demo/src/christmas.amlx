@@ -31,14 +31,14 @@ Machine{
 					}
 				},
 				Transition{
-					goto Alarm
+					goto Green
 					conditions{
 						DigitalSensorCondition {
 							bState ON
 							sensor AlarmButton
 						},
 						TimeCondition{
-							time 300
+							time 200
 							tComp >
 						}
 					}
@@ -62,7 +62,7 @@ Machine{
 		State Red {
 			transitions{
 				Transition{
-					goto Alarm
+					goto Red
 					conditions{
 						DigitalSensorCondition {
 							bState OFF
