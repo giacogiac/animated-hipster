@@ -25,6 +25,7 @@ class AMLXValidator extends AbstractAMLXValidator {
 			 warning("You better work bitch!!", m.eClass.getEStructuralFeature("start"));
 	}
 	
+	/* * /
 	@Check
 	def checkTimeConditionNotEqual(TimeCondition c) {
 		if (c.TComp == Comparison.EQUAL)
