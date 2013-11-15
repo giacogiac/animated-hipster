@@ -46,7 +46,7 @@ Machine {
 				},
 				DigitalAction{
 					bState ON
-					actuator RedLight
+					actuator GreenLight
 				},
 				DigitalAction{
 					bState OFF
