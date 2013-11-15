@@ -60,34 +60,6 @@ Machine{
 			}
 		},
 		State Red {
-			transitions{
-				Transition{
-					goto Red
-					conditions{
-						DigitalSensorCondition {
-							bState OFF
-							sensor AlarmButton
-						},
-						TimeCondition{
-							time 300
-							tComp >
-						}
-					}
-				},
-				Transition{
-					goto Green
-					conditions{
-						DigitalSensorCondition {
-							bState ON
-							sensor AlarmButton
-						},
-						TimeCondition{
-							time 300
-							tComp >
-						}
-					}
-				}
-			}
 			actions {
 				DigitalAction {
 					bState OFF
@@ -114,7 +86,7 @@ Machine{
 						},
 						TimeCondition{
 							time 300
-							tComp >
+							tComp =
 						}
 					}
 				},

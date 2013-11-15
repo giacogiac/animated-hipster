@@ -34,6 +34,11 @@ class AMLXGenerator implements IGenerator {
 		unsigned long prev;
 		unsigned long elapsed;
 		
+		void frequency()
+		{
+			wait(1000/freq);
+		}
+		
 		void setup()
 		{
 			«FOR b : m.bricks»

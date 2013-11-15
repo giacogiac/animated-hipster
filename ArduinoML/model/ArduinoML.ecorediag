@@ -22,6 +22,10 @@
   <children xmi:type="notation:Node" xmi:id="_LHtUwDPuEeOWWpfQukJaBw" type="1001">
     <children xmi:type="notation:Node" xmi:id="_LHt70DPuEeOWWpfQukJaBw" type="4001"/>
     <children xmi:type="notation:Node" xmi:id="_LHui4DPuEeOWWpfQukJaBw" type="5001">
+      <children xmi:type="notation:Node" xmi:id="_3Jyh8E4REeOcqfa2C7iZJw" type="2001">
+        <element xmi:type="ecore:EAttribute" href="ArduinoML.ecore#//AMLMachine/frequency"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_3Jyh8U4REeOcqfa2C7iZJw"/>
+      </children>
       <styles xmi:type="notation:DrawerStyle" xmi:id="_LHui4TPuEeOWWpfQukJaBw"/>
       <styles xmi:type="notation:SortingStyle" xmi:id="_LHui4jPuEeOWWpfQukJaBw"/>
       <styles xmi:type="notation:FilteringStyle" xmi:id="_LHui4zPuEeOWWpfQukJaBw"/>

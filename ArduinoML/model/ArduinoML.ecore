@@ -19,6 +19,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="states" lowerBound="1"
         upperBound="-1" eType="#//AMLState" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="start" lowerBound="1" eType="#//AMLState"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="frequency" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AMLState" eSuperTypes="#//NamedElement">
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
@@ -79,6 +80,12 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Condition" abstract="true"/>
   <eClassifiers xsi:type="ecore:EClass" name="TimeCondition" eSuperTypes="#//Condition">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="TimeMustBePositive"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+      <details key="TimeMustBePositive" value="&#xA;&#x9;&#x9;&#x9;self.time > 0"/>
+    </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="time" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="tComp" lowerBound="1" eType="#//Comparison"/>
   </eClassifiers>

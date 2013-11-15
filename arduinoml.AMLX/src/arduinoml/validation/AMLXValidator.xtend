@@ -25,25 +25,28 @@ class AMLXValidator extends AbstractAMLXValidator {
 			 warning("You better work bitch!!", m.eClass.getEStructuralFeature("start"));
 	}
 	
-	/* * /
+	
 	@Check
 	def checkTimeConditionNotEqual(TimeCondition c) {
 		if (c.TComp == Comparison.EQUAL)
-			warning("Equality on time condition is highly unrecomended", c.eClass.getEStructuralFeature("tComp"));
+			warning("Equality condition on time is highly unrecomended", c.eClass.getEStructuralFeature("tComp"));
 	}
 	
 	@Check
 	def checkSinkState(AMLState s) {
 		for(Transition t : s.transitions) {
-			if(t.conditions.exists[TimeCondition.isInstance(it) || TimeCondition.cast(it).TComp == Comparison.SUPERIOR])
+			if(t.conditions.forall[!TimeCondition.isInstance(it)])
+				return;
+			if(t.conditions.filter(TimeCondition).forall[it.TComp == Comparison::SUPERIOR])
 				return;
 		}
-		if (s.transitions.empty)
+		if (s.transitions.empty) {
 			warning("You never escape from that state", s.eClass.getEStructuralFeature("name"));
-		warning("You may never escape from that state", s.eClass.getEStructuralFeature("name"));
+		} else {
+			warning("You may never escape from that state", s.eClass.getEStructuralFeature("name"));
+		}
 	}
 	
-	/* * /
 	@Check
 	def checkUnreacheableState(AMLMachine m) {
 		var List<AMLState> reached = new ArrayList<AMLState>();
@@ -62,5 +65,4 @@ class AMLXValidator extends AbstractAMLXValidator {
 			}
 		}
 	}
-	/* */
 }

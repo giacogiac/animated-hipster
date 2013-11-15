@@ -7,6 +7,7 @@ AMLMachine returns AMLMachine:
 	'Machine'
 	'{'
 		'start' start=[AMLState|EString]
+		('frequency' frequency=EInt)?
 		('bricks' '{' bricks+=Brick ( "," bricks+=Brick)* '}' )?
 		'states' '{' states+=AMLState ( "," states+=AMLState)* '}' 
 	'}';
@@ -30,7 +31,7 @@ EString returns ecore::EString:
 	STRING | ID;
 
 EInt returns ecore::EInt:
-	'-'? INT;
+	INT;
 
 Sensor returns Sensor:
 	'Sensor'

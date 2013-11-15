@@ -7,7 +7,7 @@ Machine {
 		Actuator RedLight{
 			pin 9  
 		},
-		Actuator GreenLight{ 
+		Actuator GreenLight{
 			pin 10
 		}, 
 		Actuator AlarmSignal{
