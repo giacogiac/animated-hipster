@@ -1,3 +1,22 @@
 <?xml version="1.0" encoding="ASCII"?>
-<arduinoml:AMLMachine xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:arduinoml="http://arduinoml/1.0" xsi:schemaLocation="http://arduinoml/1.0 ArduinoML.ecore"/>
+<arduinoml:AMLMachine
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:arduinoml="http://arduinoml/1.0"
+    xsi:schemaLocation="http://arduinoml/1.0 ArduinoML.ecore"
+    start="debut">
+  <bricks xsi:type="arduinoml:AnalogSensor"
+      name="fefezfzefg"/>
+  <bricks xsi:type="arduinoml:AnalogSensor"
+      name="zdzdzdz"/>
+  <bricks xsi:type="arduinoml:DigitalSensor"
+      name="dfzfeez"/>
+  <bricks xsi:type="arduinoml:DigitalSensor"
+      name="dzdz"/>
+  <bricks xsi:type="arduinoml:AnalogActuator"
+      name="dzdzd"/>
+  <bricks xsi:type="arduinoml:AnalogActuator"
+      name="fzefgezg"/>
+  <states name="debut"/>
+</arduinoml:AMLMachine>

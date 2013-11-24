@@ -28,15 +28,37 @@
         eType="#//Action" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Brick" abstract="true" eSuperTypes="#//NamedElement">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="TooMuchBricks"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+      <details key="TooMuchBricks" value="&#xA;&#x9;&#x9;Brick.allInstances()->select(b | b.oclIsTypeOf(DigitalSensor) or b.oclIsTypeOf(DigitalActuator) or b.oclIsTypeOf(AnalogActuator))->size() &lt;= 5"/>
+    </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="pin" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
         changeable="false" volatile="true" derived="true">
       <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
-        <details key="derivation" value="15"/>
+        <details key="derivation" value="&#xA;&#x9;&#x9;&#x9;&#x9;if (self.oclIsTypeOf(AnalogSensor)) then&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;Brick.allInstances()->select(b | b.oclIsTypeOf(AnalogSensor) and b.name &lt;> null)->sortedBy(name)->indexOf(self)&#xA;&#x9;&#x9;&#x9;&#x9;else if (self.oclIsTypeOf(AnalogActuator)) then&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;8 + Brick.allInstances()->select(b | b.oclIsTypeOf(AnalogActuator) and b.name &lt;> null)->sortedBy(name)->indexOf(self)&#xA;&#x9;&#x9;&#x9;&#x9;else&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;13 - Brick.allInstances()->select(b | (b.oclIsTypeOf(DigitalSensor) or b.oclIsTypeOf(DigitalActuator)) and b.name &lt;> null)->sortedBy(name)->indexOf(self)&#xA;&#x9;&#x9;&#x9;&#x9;endif&#xA;&#x9;&#x9;&#x9;&#x9;endif"/>
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="DigitalSensor" eSuperTypes="#//Brick"/>
   <eClassifiers xsi:type="ecore:EClass" name="DigitalActuator" eSuperTypes="#//Brick"/>
+  <eClassifiers xsi:type="ecore:EClass" name="AnalogSensor" eSuperTypes="#//Brick">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="TooMuchAnalogSensor"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+      <details key="TooMuchAnalogSensor" value="&#xA;&#x9;&#x9;AnalogSensor.allInstances()->size() &lt;= 5"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AnalogActuator" eSuperTypes="#//Brick">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="TooMuchAnalogActuator"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+      <details key="TooMuchAnalogActuator" value="&#xA;&#x9;&#x9;AnalogSensor.allInstances()->size() &lt;= 3"/>
+    </eAnnotations>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Transition">
     <eStructuralFeatures xsi:type="ecore:EReference" name="goto" lowerBound="1" eType="#//AMLState"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="conditions" lowerBound="1"
@@ -64,7 +86,7 @@
       <details key="constraints" value="TimeMustBePositive"/>
     </eAnnotations>
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
-      <details key="TimeMustBePositive" value="&#xA;&#x9;&#x9;&#x9;self.time > 0"/>
+      <details key="TimeMustBePositive" value="&#xA;&#x9;self.time > 0"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="time" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="tComp" lowerBound="1" eType="#//TimeComparison"/>
@@ -80,14 +102,12 @@
     <eLiterals name="LOWEREQ" value="5"/>
     <eLiterals name="LOWER" value="4"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="AnalogSensor" eSuperTypes="#//Brick"/>
-  <eClassifiers xsi:type="ecore:EClass" name="AnalogActuator" eSuperTypes="#//Brick"/>
   <eClassifiers xsi:type="ecore:EClass" name="AnalogCondition" eSuperTypes="#//Condition">
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
       <details key="constraints" value="InvalidValue"/>
     </eAnnotations>
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
-      <details key="InvalidValue" value="&#xA;&#x9;&#x9;&#x9;self.value >= 0 and self.value &lt;= 1023"/>
+      <details key="InvalidValue" value="&#xA;&#x9;self.value >= 0 and self.value &lt;= 1023"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="aComp" lowerBound="1" eType="#//AnalogComparison"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
@@ -104,7 +124,7 @@
       <details key="constraints" value="InvalidValue"/>
     </eAnnotations>
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
-      <details key="InvalidValue" value="&#xA;&#x9;&#x9;&#x9;self.value >= 0 and self.value &lt;= 1023"/>
+      <details key="InvalidValue" value="&#xA;&#x9;self.value >= 0 and self.value &lt;= 1023"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>

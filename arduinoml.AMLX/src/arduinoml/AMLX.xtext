@@ -74,4 +74,4 @@ AnalogActionValue returns AnalogActionValue:
 	'set' actuator=[AnalogActuator|EString] 'to' value=EInt;
 
 AnalogActionSensor returns AnalogActionSensor:
-		'set' sensor=[AnalogSensor|EString] 'to' actuator=[AnalogActuator|EString];
+	'set' actuator=[AnalogActuator|EString] 'to' sensor=[AnalogSensor|EString];
