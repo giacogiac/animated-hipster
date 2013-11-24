@@ -4,11 +4,11 @@
     <children xmi:type="notation:Node" xmi:id="_FUOTMDPuEeOWWpfQukJaBw" type="4010"/>
     <children xmi:type="notation:Node" xmi:id="_FUOTMTPuEeOWWpfQukJaBw" type="5008">
       <children xmi:type="notation:Node" xmi:id="_IOed0DPuEeOWWpfQukJaBw" type="2006">
-        <element xmi:type="ecore:EEnumLiteral" href="ArduinoML.ecore#//DigitalBrickState/ON"/>
+        <element xmi:type="ecore:EEnumLiteral" href="ArduinoML.ecore#//DigitalState/ON"/>
         <layoutConstraint xmi:type="notation:Location" xmi:id="_IOed0TPuEeOWWpfQukJaBw"/>
       </children>
       <children xmi:type="notation:Node" xmi:id="_HV2zwDPuEeOWWpfQukJaBw" type="2006">
-        <element xmi:type="ecore:EEnumLiteral" href="ArduinoML.ecore#//DigitalBrickState/OFF"/>
+        <element xmi:type="ecore:EEnumLiteral" href="ArduinoML.ecore#//DigitalState/OFF"/>
         <layoutConstraint xmi:type="notation:Location" xmi:id="_HV2zwTPuEeOWWpfQukJaBw"/>
       </children>
       <styles xmi:type="notation:DrawerStyle" xmi:id="_FUO6QDPuEeOWWpfQukJaBw"/>
@@ -16,8 +16,8 @@
       <styles xmi:type="notation:FilteringStyle" xmi:id="_FUO6QjPuEeOWWpfQukJaBw"/>
     </children>
     <styles xmi:type="notation:ShapeStyle" xmi:id="_FUNFETPuEeOWWpfQukJaBw" fontColor="4210752" fontName="Segoe UI" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
-    <element xmi:type="ecore:EEnum" href="ArduinoML.ecore#//DigitalBrickState"/>
-    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FUNFEjPuEeOWWpfQukJaBw" x="40" y="105"/>
+    <element xmi:type="ecore:EEnum" href="ArduinoML.ecore#//DigitalState"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FUNFEjPuEeOWWpfQukJaBw" x="15" y="5"/>
   </children>
   <children xmi:type="notation:Node" xmi:id="_LHtUwDPuEeOWWpfQukJaBw" type="1001">
     <children xmi:type="notation:Node" xmi:id="_LHt70DPuEeOWWpfQukJaBw" type="4001"/>
@@ -58,9 +58,9 @@
   <children xmi:type="notation:Node" xmi:id="_SvnhUDPuEeOWWpfQukJaBw" type="1001">
     <children xmi:type="notation:Node" xmi:id="_SvovcDPuEeOWWpfQukJaBw" type="4001"/>
     <children xmi:type="notation:Node" xmi:id="_SvovcTPuEeOWWpfQukJaBw" type="5001">
-      <children xmi:type="notation:Node" xmi:id="_WutNEDPuEeOWWpfQukJaBw" type="2001">
+      <children xmi:type="notation:Node" xmi:id="_Btqs0FUXEeOBu9PiGjF4Hg" type="2001">
         <element xmi:type="ecore:EAttribute" href="ArduinoML.ecore#//Brick/pin"/>
-        <layoutConstraint xmi:type="notation:Location" xmi:id="_WutNETPuEeOWWpfQukJaBw"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_Btqs0VUXEeOBu9PiGjF4Hg"/>
       </children>
       <styles xmi:type="notation:DrawerStyle" xmi:id="_SvovcjPuEeOWWpfQukJaBw"/>
       <styles xmi:type="notation:SortingStyle" xmi:id="_SvovczPuEeOWWpfQukJaBw"/>
@@ -88,7 +88,7 @@
       <styles xmi:type="notation:FilteringStyle" xmi:id="_bORvszPuEeOWWpfQukJaBw"/>
     </children>
     <styles xmi:type="notation:ShapeStyle" xmi:id="_bOP6gTPuEeOWWpfQukJaBw" fontColor="4210752" fontName="Segoe UI" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
-    <element xmi:type="ecore:EClass" href="ArduinoML.ecore#//Sensor"/>
+    <element xmi:type="ecore:EClass" href="ArduinoML.ecore#//DigitalSensor"/>
     <layoutConstraint xmi:type="notation:Bounds" xmi:id="_bOP6gjPuEeOWWpfQukJaBw" x="207" y="236"/>
   </children>
   <children xmi:type="notation:Node" xmi:id="_cKRd4DPuEeOWWpfQukJaBw" type="1001">
@@ -104,7 +104,7 @@
       <styles xmi:type="notation:FilteringStyle" xmi:id="_cKSsAzPuEeOWWpfQukJaBw"/>
     </children>
     <styles xmi:type="notation:ShapeStyle" xmi:id="_cKRd4TPuEeOWWpfQukJaBw" fontColor="4210752" fontName="Segoe UI" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
-    <element xmi:type="ecore:EClass" href="ArduinoML.ecore#//Actuator"/>
+    <element xmi:type="ecore:EClass" href="ArduinoML.ecore#//DigitalActuator"/>
     <layoutConstraint xmi:type="notation:Bounds" xmi:id="_cKRd4jPuEeOWWpfQukJaBw" x="422" y="236"/>
   </children>
   <children xmi:type="notation:Node" xmi:id="_kpo24DPuEeOWWpfQukJaBw" type="1001">
@@ -127,7 +127,7 @@
     <children xmi:type="notation:Node" xmi:id="_mhyrUDPuEeOWWpfQukJaBw" type="4001"/>
     <children xmi:type="notation:Node" xmi:id="_mhzSYDPuEeOWWpfQukJaBw" type="5001">
       <children xmi:type="notation:Node" xmi:id="_noSZUDPuEeOWWpfQukJaBw" type="2001">
-        <element xmi:type="ecore:EAttribute" href="ArduinoML.ecore#//DigitalSensorCondition/bState"/>
+        <element xmi:type="ecore:EAttribute" href="ArduinoML.ecore#//DigitalCondition/dState"/>
         <layoutConstraint xmi:type="notation:Location" xmi:id="_noSZUTPuEeOWWpfQukJaBw"/>
       </children>
       <styles xmi:type="notation:DrawerStyle" xmi:id="_mhzSYTPuEeOWWpfQukJaBw"/>
@@ -140,14 +140,14 @@
       <styles xmi:type="notation:FilteringStyle" xmi:id="_mhz5czPuEeOWWpfQukJaBw"/>
     </children>
     <styles xmi:type="notation:ShapeStyle" xmi:id="_mhyEQTPuEeOWWpfQukJaBw" fontColor="4210752" fontName="Segoe UI" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
-    <element xmi:type="ecore:EClass" href="ArduinoML.ecore#//DigitalSensorCondition"/>
+    <element xmi:type="ecore:EClass" href="ArduinoML.ecore#//DigitalCondition"/>
     <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mhyEQjPuEeOWWpfQukJaBw" x="187" y="341"/>
   </children>
   <children xmi:type="notation:Node" xmi:id="_ptz7YDPuEeOWWpfQukJaBw" type="1001">
     <children xmi:type="notation:Node" xmi:id="_pt1JgDPuEeOWWpfQukJaBw" type="4001"/>
     <children xmi:type="notation:Node" xmi:id="_pt1JgTPuEeOWWpfQukJaBw" type="5001">
       <children xmi:type="notation:Node" xmi:id="_rBX1ADPuEeOWWpfQukJaBw" type="2001">
-        <element xmi:type="ecore:EAttribute" href="ArduinoML.ecore#//DigitalAction/bState"/>
+        <element xmi:type="ecore:EAttribute" href="ArduinoML.ecore#//DigitalAction/dState"/>
         <layoutConstraint xmi:type="notation:Location" xmi:id="_rBYcEDPuEeOWWpfQukJaBw"/>
       </children>
       <styles xmi:type="notation:DrawerStyle" xmi:id="_pt1JgjPuEeOWWpfQukJaBw"/>
@@ -239,24 +239,175 @@
     <children xmi:type="notation:Node" xmi:id="_uD8PMzgBEeON_703OuNKTA" type="4010"/>
     <children xmi:type="notation:Node" xmi:id="_uD8PNDgBEeON_703OuNKTA" type="5008">
       <children xmi:type="notation:Node" xmi:id="_xKty4DgBEeON_703OuNKTA" type="2006">
-        <element xmi:type="ecore:EEnumLiteral" href="ArduinoML.ecore#//Comparison/INFERIOR"/>
+        <element xmi:type="ecore:EEnumLiteral" href="ArduinoML.ecore#//TimeComparison/BEFORE"/>
         <layoutConstraint xmi:type="notation:Location" xmi:id="_xKty4TgBEeON_703OuNKTA"/>
       </children>
       <children xmi:type="notation:Node" xmi:id="_vRxUQDgBEeON_703OuNKTA" type="2006">
-        <element xmi:type="ecore:EEnumLiteral" href="ArduinoML.ecore#//Comparison/SUPERIOR"/>
+        <element xmi:type="ecore:EEnumLiteral" href="ArduinoML.ecore#//TimeComparison/AFTER"/>
         <layoutConstraint xmi:type="notation:Location" xmi:id="_vRxUQTgBEeON_703OuNKTA"/>
-      </children>
-      <children xmi:type="notation:Node" xmi:id="_OIM14DgCEeON_703OuNKTA" type="2006">
-        <element xmi:type="ecore:EEnumLiteral" href="ArduinoML.ecore#//Comparison/EQUAL"/>
-        <layoutConstraint xmi:type="notation:Location" xmi:id="_OIM14TgCEeON_703OuNKTA"/>
       </children>
       <styles xmi:type="notation:DrawerStyle" xmi:id="_uD8PNTgBEeON_703OuNKTA"/>
       <styles xmi:type="notation:SortingStyle" xmi:id="_uD8PNjgBEeON_703OuNKTA"/>
       <styles xmi:type="notation:FilteringStyle" xmi:id="_uD8PNzgBEeON_703OuNKTA"/>
     </children>
     <styles xmi:type="notation:ShapeStyle" xmi:id="_uD8PMTgBEeON_703OuNKTA" fontColor="4210752" fontName="Segoe UI" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
-    <element xmi:type="ecore:EEnum" href="ArduinoML.ecore#//Comparison"/>
-    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_uD8PMjgBEeON_703OuNKTA" x="179" y="89"/>
+    <element xmi:type="ecore:EEnum" href="ArduinoML.ecore#//TimeComparison"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_uD8PMjgBEeON_703OuNKTA" x="150" y="5"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_W7AhwFCMEeOwOf7aBglHxQ" type="1005">
+    <children xmi:type="notation:Node" xmi:id="_W7DlEFCMEeOwOf7aBglHxQ" type="4010"/>
+    <children xmi:type="notation:Node" xmi:id="_W7EMIFCMEeOwOf7aBglHxQ" type="5008">
+      <children xmi:type="notation:Node" xmi:id="_-8Dt8FCOEeOwOf7aBglHxQ" type="2006">
+        <element xmi:type="ecore:EEnumLiteral" href="ArduinoML.ecore#//AnalogComparison/GREATER"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_-8Dt8VCOEeOwOf7aBglHxQ"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_BPCdMFCPEeOwOf7aBglHxQ" type="2006">
+        <element xmi:type="ecore:EEnumLiteral" href="ArduinoML.ecore#//AnalogComparison/GREATEREQ"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_BPCdMVCPEeOwOf7aBglHxQ"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_w737QFCPEeOwOf7aBglHxQ" type="2006">
+        <element xmi:type="ecore:EEnumLiteral" href="ArduinoML.ecore#//AnalogComparison/EQUAL"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_w737QVCPEeOwOf7aBglHxQ"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_xzp30FCPEeOwOf7aBglHxQ" type="2006">
+        <element xmi:type="ecore:EEnumLiteral" href="ArduinoML.ecore#//AnalogComparison/LOWEREQ"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_xzp30VCPEeOwOf7aBglHxQ"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_zP7okFCPEeOwOf7aBglHxQ" type="2006">
+        <element xmi:type="ecore:EEnumLiteral" href="ArduinoML.ecore#//AnalogComparison/LOWER"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_zP7okVCPEeOwOf7aBglHxQ"/>
+      </children>
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_W7EzMFCMEeOwOf7aBglHxQ"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_W7EzMVCMEeOwOf7aBglHxQ"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_W7EzMlCMEeOwOf7aBglHxQ"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_W7AhwVCMEeOwOf7aBglHxQ" fontColor="4210752" fontName="Segoe UI" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EEnum" href="ArduinoML.ecore#//AnalogComparison"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_W7AhwlCMEeOwOf7aBglHxQ" x="15" y="90"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_mZsdUFCMEeOwOf7aBglHxQ" type="1001">
+    <children xmi:type="notation:Node" xmi:id="_mZuSgFCMEeOwOf7aBglHxQ" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_mZvgoFCMEeOwOf7aBglHxQ" type="5001">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_mZvgoVCMEeOwOf7aBglHxQ"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_mZvgolCMEeOwOf7aBglHxQ"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_mZvgo1CMEeOwOf7aBglHxQ"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_mZwuwFCMEeOwOf7aBglHxQ" type="5002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_mZwuwVCMEeOwOf7aBglHxQ"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_mZwuwlCMEeOwOf7aBglHxQ"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_mZwuw1CMEeOwOf7aBglHxQ"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_mZsdUVCMEeOwOf7aBglHxQ" fontColor="4210752" fontName="Segoe UI" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EClass" href="ArduinoML.ecore#//AnalogSensor"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mZsdUlCMEeOwOf7aBglHxQ" x="715" y="240"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_ni4S8FCMEeOwOf7aBglHxQ" type="1001">
+    <children xmi:type="notation:Node" xmi:id="_ni5hEFCMEeOwOf7aBglHxQ" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_ni5hEVCMEeOwOf7aBglHxQ" type="5001">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_ni5hElCMEeOwOf7aBglHxQ"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_ni5hE1CMEeOwOf7aBglHxQ"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_ni5hFFCMEeOwOf7aBglHxQ"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_ni6IIFCMEeOwOf7aBglHxQ" type="5002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_ni6IIVCMEeOwOf7aBglHxQ"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_ni6IIlCMEeOwOf7aBglHxQ"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_ni6II1CMEeOwOf7aBglHxQ"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_ni4S8VCMEeOwOf7aBglHxQ" fontColor="4210752" fontName="Segoe UI" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EClass" href="ArduinoML.ecore#//AnalogActuator"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ni4S8lCMEeOwOf7aBglHxQ" x="825" y="235"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_w5eO4FCMEeOwOf7aBglHxQ" type="1001">
+    <children xmi:type="notation:Node" xmi:id="_w5fdAFCMEeOwOf7aBglHxQ" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_w5fdAVCMEeOwOf7aBglHxQ" type="5001">
+      <children xmi:type="notation:Node" xmi:id="_BMcuIFCNEeOwOf7aBglHxQ" type="2001">
+        <element xmi:type="ecore:EAttribute" href="ArduinoML.ecore#//AnalogCondition/value"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_BMcuIVCNEeOwOf7aBglHxQ"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_zv63kFCMEeOwOf7aBglHxQ" type="2001">
+        <element xmi:type="ecore:EAttribute" href="ArduinoML.ecore#//AnalogCondition/aComp"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_zv63kVCMEeOwOf7aBglHxQ"/>
+      </children>
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_w5fdAlCMEeOwOf7aBglHxQ"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_w5fdA1CMEeOwOf7aBglHxQ"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_w5fdBFCMEeOwOf7aBglHxQ"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_w5gEEFCMEeOwOf7aBglHxQ" type="5002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_w5gEEVCMEeOwOf7aBglHxQ"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_w5gEElCMEeOwOf7aBglHxQ"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_w5gEE1CMEeOwOf7aBglHxQ"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_w5eO4VCMEeOwOf7aBglHxQ" fontColor="4210752" fontName="Segoe UI" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EClass" href="ArduinoML.ecore#//AnalogCondition"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_w5eO4lCMEeOwOf7aBglHxQ" x="710" y="315"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_VswwgFCNEeOwOf7aBglHxQ" type="1001">
+    <children xmi:type="notation:Node" xmi:id="_Vsx-oFCNEeOwOf7aBglHxQ" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_Vsx-oVCNEeOwOf7aBglHxQ" type="5001">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_Vsx-olCNEeOwOf7aBglHxQ"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_Vsx-o1CNEeOwOf7aBglHxQ"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_Vsx-pFCNEeOwOf7aBglHxQ"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_VsylsFCNEeOwOf7aBglHxQ" type="5002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_VsylsVCNEeOwOf7aBglHxQ"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_VsylslCNEeOwOf7aBglHxQ"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_Vsyls1CNEeOwOf7aBglHxQ"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_VswwgVCNEeOwOf7aBglHxQ" fontColor="4210752" fontName="Segoe UI" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EClass" href="ArduinoML.ecore#//AnalogAction"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_VswwglCNEeOwOf7aBglHxQ" x="730" y="395"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_jdBl8FCOEeOwOf7aBglHxQ" type="1001">
+    <children xmi:type="notation:Node" xmi:id="_jdDbIFCOEeOwOf7aBglHxQ" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_jdDbIVCOEeOwOf7aBglHxQ" type="5001">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_jdDbIlCOEeOwOf7aBglHxQ"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_jdDbI1COEeOwOf7aBglHxQ"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_jdDbJFCOEeOwOf7aBglHxQ"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_jdECMFCOEeOwOf7aBglHxQ" type="5002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_jdECMVCOEeOwOf7aBglHxQ"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_jdECMlCOEeOwOf7aBglHxQ"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_jdECM1COEeOwOf7aBglHxQ"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_jdBl8VCOEeOwOf7aBglHxQ" fontColor="4210752" fontName="Segoe UI" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EClass" href="ArduinoML.ecore#//Action"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_jdBl8lCOEeOwOf7aBglHxQ" x="535" y="265"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_vmlmgFCTEeOwOf7aBglHxQ" type="1001">
+    <children xmi:type="notation:Node" xmi:id="_vmmNkFCTEeOwOf7aBglHxQ" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_vmm0oFCTEeOwOf7aBglHxQ" type="5001">
+      <children xmi:type="notation:Node" xmi:id="_236fEFCTEeOwOf7aBglHxQ" type="2001">
+        <element xmi:type="ecore:EAttribute" href="ArduinoML.ecore#//AnalogActionValue/value"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_236fEVCTEeOwOf7aBglHxQ"/>
+      </children>
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_vmm0oVCTEeOwOf7aBglHxQ"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_vmm0olCTEeOwOf7aBglHxQ"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_vmm0o1CTEeOwOf7aBglHxQ"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_vmm0pFCTEeOwOf7aBglHxQ" type="5002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_vmm0pVCTEeOwOf7aBglHxQ"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_vmm0plCTEeOwOf7aBglHxQ"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_vmm0p1CTEeOwOf7aBglHxQ"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_vmlmgVCTEeOwOf7aBglHxQ" fontColor="4210752" fontName="Segoe UI" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EClass" href="ArduinoML.ecore#//AnalogActionValue"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_vmlmglCTEeOwOf7aBglHxQ" x="712" y="493"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_zqReYFCTEeOwOf7aBglHxQ" type="1001">
+    <children xmi:type="notation:Node" xmi:id="_zqSFcFCTEeOwOf7aBglHxQ" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_zqSFcVCTEeOwOf7aBglHxQ" type="5001">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_zqSFclCTEeOwOf7aBglHxQ"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_zqSFc1CTEeOwOf7aBglHxQ"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_zqSFdFCTEeOwOf7aBglHxQ"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_zqSsgFCTEeOwOf7aBglHxQ" type="5002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_zqSsgVCTEeOwOf7aBglHxQ"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_zqSsglCTEeOwOf7aBglHxQ"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_zqSsg1CTEeOwOf7aBglHxQ"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_zqReYVCTEeOwOf7aBglHxQ" fontColor="4210752" fontName="Segoe UI" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EClass" href="ArduinoML.ecore#//AnalogActionSensor"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_zqReYlCTEeOwOf7aBglHxQ" x="865" y="498"/>
   </children>
   <styles xmi:type="notation:DiagramStyle" xmi:id="_EOCHMTPuEeOWWpfQukJaBw"/>
   <element xmi:type="ecore:EPackage" href="ArduinoML.ecore#/"/>
@@ -356,7 +507,7 @@
     <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_Hri6czPvEeOWWpfQukJaBw" points="[1, -1, -85, 76]$[34, -52, -52, 25]"/>
     <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_HroaADPvEeOWWpfQukJaBw" id="(0.45098039215686275,0.046511627906976744)"/>
   </edges>
-  <edges xmi:type="notation:Edge" xmi:id="_MBcjsDPvEeOWWpfQukJaBw" type="3002" source="_NUU9UDPuEeOWWpfQukJaBw" target="_ptz7YDPuEeOWWpfQukJaBw">
+  <edges xmi:type="notation:Edge" xmi:id="_MBcjsDPvEeOWWpfQukJaBw" type="3002" source="_NUU9UDPuEeOWWpfQukJaBw" target="_jdBl8FCOEeOwOf7aBglHxQ">
     <children xmi:type="notation:Node" xmi:id="_MBdKwDPvEeOWWpfQukJaBw" type="4011">
       <layoutConstraint xmi:type="notation:Location" xmi:id="_MBdKwTPvEeOWWpfQukJaBw" x="17" y="-17"/>
     </children>
@@ -366,9 +517,8 @@
     <styles xmi:type="notation:ConnectorStyle" xmi:id="_MBcjsTPvEeOWWpfQukJaBw" lineColor="4210752"/>
     <styles xmi:type="notation:FontStyle" xmi:id="_MBcjsjPvEeOWWpfQukJaBw" fontColor="4210752" fontName="Segoe UI" fontHeight="10"/>
     <element xmi:type="ecore:EReference" href="ArduinoML.ecore#//AMLState/actions"/>
-    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_MBcjszPvEeOWWpfQukJaBw" points="[-5, -3, 100, 54]$[-103, -48, 2, 9]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_MBcjszPvEeOWWpfQukJaBw" points="[-1, -2, 98, 55]$[-17, -123, 82, -66]$[-49, -97, 50, -40]"/>
     <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_MBjRYDPvEeOWWpfQukJaBw" id="(0.05217391304347826,0.058823529411764705)"/>
-    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_MBjRYTPvEeOWWpfQukJaBw" id="(0.6074074074074074,0.8235294117647058)"/>
   </edges>
   <edges xmi:type="notation:Edge" xmi:id="_QugvwDPvEeOWWpfQukJaBw" type="3002" source="_mhyEQDPuEeOWWpfQukJaBw" target="_bOP6gDPuEeOWWpfQukJaBw">
     <children xmi:type="notation:Node" xmi:id="_QuhW0DPvEeOWWpfQukJaBw" type="4011">
@@ -379,7 +529,7 @@
     </children>
     <styles xmi:type="notation:ConnectorStyle" xmi:id="_QugvwTPvEeOWWpfQukJaBw" lineColor="4210752"/>
     <styles xmi:type="notation:FontStyle" xmi:id="_QugvwjPvEeOWWpfQukJaBw" fontColor="4210752" fontName="Segoe UI" fontHeight="10"/>
-    <element xmi:type="ecore:EReference" href="ArduinoML.ecore#//DigitalSensorCondition/sensor"/>
+    <element xmi:type="ecore:EReference" href="ArduinoML.ecore#//DigitalCondition/sensor"/>
     <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_QugvwzPvEeOWWpfQukJaBw" points="[2, -1, 1, 70]$[2, -65, 1, 6]"/>
     <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_QundcDPvEeOWWpfQukJaBw" id="(0.43703703703703706,0.0392156862745098)"/>
     <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_QundcTPvEeOWWpfQukJaBw" id="(0.39215686274509803,0.8604651162790697)"/>
@@ -433,5 +583,97 @@
     <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_r3EH8zgBEeON_703OuNKTA" points="[3, -6, -40, 75]$[3, -36, -40, 45]$[40, -36, -3, 45]$[40, -75, -3, 6]"/>
     <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_r3KOkDgBEeON_703OuNKTA" id="(0.36792452830188677,0.16279069767441862)"/>
     <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_r3KOkTgBEeON_703OuNKTA" id="(0.11764705882352941,0.8604651162790697)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_GsdaEFCNEeOwOf7aBglHxQ" type="3002" source="_w5eO4FCMEeOwOf7aBglHxQ" target="_mZsdUFCMEeOwOf7aBglHxQ">
+    <children xmi:type="notation:Node" xmi:id="_GseoMFCNEeOwOf7aBglHxQ" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_GseoMVCNEeOwOf7aBglHxQ" x="-10" y="-10"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_GseoMlCNEeOwOf7aBglHxQ" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_GseoM1CNEeOwOf7aBglHxQ" x="10" y="10"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_GsdaEVCNEeOwOf7aBglHxQ" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_GsdaElCNEeOwOf7aBglHxQ" fontColor="4210752" fontName="Segoe UI" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="ArduinoML.ecore#//AnalogCondition/sensor"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_GsdaE1CNEeOwOf7aBglHxQ" points="[0, -3, -13, 55]$[-37, -62, -50, -4]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Gsi5oFCNEeOwOf7aBglHxQ" id="(0.2182741116751269,0.058823529411764705)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_JGt2AFCNEeOwOf7aBglHxQ" type="3003" source="_mZsdUFCMEeOwOf7aBglHxQ" target="_SvnhUDPuEeOWWpfQukJaBw">
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_JGt2AVCNEeOwOf7aBglHxQ" routing="Rectilinear" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_JGt2AlCNEeOwOf7aBglHxQ" fontName="Segoe UI"/>
+    <element xsi:nil="true"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_JGt2A1CNEeOwOf7aBglHxQ" points="[28, -8, 400, 83]$[28, -33, 400, 58]$[-388, -33, -16, 58]$[-388, -89, -16, 2]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_JGxgYFCNEeOwOf7aBglHxQ" id="(0.23529411764705882,0.20930232558139536)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_JGxgYVCNEeOwOf7aBglHxQ" id="(0.696078431372549,0.9607843137254902)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_Mb8scFCNEeOwOf7aBglHxQ" type="3003" source="_w5eO4FCMEeOwOf7aBglHxQ" target="_ftfuEDgBEeON_703OuNKTA">
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_Mb8scVCNEeOwOf7aBglHxQ" routing="Rectilinear" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_Mb8sclCNEeOwOf7aBglHxQ" fontName="Segoe UI"/>
+    <element xsi:nil="true"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_Mb8sc1CNEeOwOf7aBglHxQ" points="[86, -10, 668, 60]$[86, -20, 668, 50]$[-562, -20, 20, 50]$[-562, -49, 20, 21]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Mb_vwFCNEeOwOf7aBglHxQ" id="(0.06598984771573604,0.16176470588235295)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_hel_0FCNEeOwOf7aBglHxQ" type="3002" source="_VswwgFCNEeOwOf7aBglHxQ" target="_ni4S8FCMEeOwOf7aBglHxQ">
+    <children xmi:type="notation:Node" xmi:id="_hemm4FCNEeOwOf7aBglHxQ" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_hemm4VCNEeOwOf7aBglHxQ" x="-10" y="-10"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_hemm4lCNEeOwOf7aBglHxQ" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_hepqMFCNEeOwOf7aBglHxQ" x="10" y="10"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_hel_0VCNEeOwOf7aBglHxQ" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_hel_0lCNEeOwOf7aBglHxQ" fontColor="4210752" fontName="Segoe UI" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="ArduinoML.ecore#//AnalogAction/actuator"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_hel_01CNEeOwOf7aBglHxQ" points="[2, -8, -42, 165]$[-10, -178, -54, -5]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_het7oFCNEeOwOf7aBglHxQ" id="(0.6192893401015228,0.1323529411764706)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_lhtP8FCNEeOwOf7aBglHxQ" type="3003" source="_ni4S8FCMEeOwOf7aBglHxQ" target="_SvnhUDPuEeOWWpfQukJaBw">
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_lhtP8VCNEeOwOf7aBglHxQ" routing="Rectilinear" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_lhtP8lCNEeOwOf7aBglHxQ" fontName="Segoe UI"/>
+    <element xsi:nil="true"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_lhtP81CNEeOwOf7aBglHxQ" points="[-54, -13, 445, 103]$[-497, -96, 2, 20]"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_lhw6UFCNEeOwOf7aBglHxQ" id="(0.8333333333333334,0.6078431372549019)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_oRokcFCOEeOwOf7aBglHxQ" type="3003" source="_ptz7YDPuEeOWWpfQukJaBw" target="_jdBl8FCOEeOwOf7aBglHxQ">
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_oRokcVCOEeOwOf7aBglHxQ" routing="Rectilinear" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_oRokclCOEeOwOf7aBglHxQ" fontName="Segoe UI"/>
+    <element xsi:nil="true"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_oRokc1COEeOwOf7aBglHxQ" points="[3, -8, -43, 61]$[-4, -61, -50, 8]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_oRrnwFCOEeOwOf7aBglHxQ" id="(0.8206896551724138,0.17647058823529413)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_o9dvsFCOEeOwOf7aBglHxQ" type="3003" source="_VswwgFCNEeOwOf7aBglHxQ" target="_jdBl8FCOEeOwOf7aBglHxQ">
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_o9dvsVCOEeOwOf7aBglHxQ" routing="Rectilinear" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_o9dvslCOEeOwOf7aBglHxQ" fontName="Segoe UI"/>
+    <element xsi:nil="true"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_o9dvs1COEeOwOf7aBglHxQ" points="[-10, -10, 119, 123]$[-127, -124, 2, 9]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_o9iBIFCOEeOwOf7aBglHxQ" id="(0.07106598984771574,0.16176470588235295)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_o9iBIVCOEeOwOf7aBglHxQ" id="(0.6470588235294118,0.7906976744186046)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_1vihwFCTEeOwOf7aBglHxQ" type="3003" source="_vmlmgFCTEeOwOf7aBglHxQ" target="_VswwgFCNEeOwOf7aBglHxQ">
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_1vjI0FCTEeOwOf7aBglHxQ" routing="Rectilinear" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_1vjI0VCTEeOwOf7aBglHxQ" fontName="Segoe UI"/>
+    <element xsi:nil="true"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_1vjI0lCTEeOwOf7aBglHxQ" points="[1, -2, -31, 78]$[33, -59, 1, 21]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_1vllEFCTEeOwOf7aBglHxQ" id="(0.08461538461538462,0.06976744186046512)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_1vllEVCTEeOwOf7aBglHxQ" id="(0.24509803921568626,0.5116279069767442)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_2NGngFCTEeOwOf7aBglHxQ" type="3003" source="_zqReYFCTEeOwOf7aBglHxQ" target="_VswwgFCNEeOwOf7aBglHxQ">
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_2NGngVCTEeOwOf7aBglHxQ" routing="Rectilinear" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_2NGnglCTEeOwOf7aBglHxQ" fontName="Segoe UI"/>
+    <element xsi:nil="true"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_2NGng1CTEeOwOf7aBglHxQ" points="[-12, -10, 83, 72]$[-93, -72, 2, 10]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_2NJDwFCTEeOwOf7aBglHxQ" id="(0.10144927536231885,0.2558139534883721)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_2NJq0FCTEeOwOf7aBglHxQ" id="(0.5392156862745098,0.7674418604651163)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_8C-OsFCTEeOwOf7aBglHxQ" type="3002" source="_zqReYFCTEeOwOf7aBglHxQ" target="_mZsdUFCMEeOwOf7aBglHxQ">
+    <children xmi:type="notation:Node" xmi:id="_8C-1wFCTEeOwOf7aBglHxQ" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_8C-1wVCTEeOwOf7aBglHxQ" x="-10" y="-10"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_8C-1wlCTEeOwOf7aBglHxQ" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_8C-1w1CTEeOwOf7aBglHxQ" x="10" y="10"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_8C-OsVCTEeOwOf7aBglHxQ" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_8C-OslCTEeOwOf7aBglHxQ" fontColor="4210752" fontName="Segoe UI" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="ArduinoML.ecore#//AnalogActionSensor/sensor"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_8C-Os1CTEeOwOf7aBglHxQ" points="[-4, -8, 121, 238]$[-125, -266, 0, -20]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_8DCgIFCTEeOwOf7aBglHxQ" id="(0.18840579710144928,0.20930232558139536)"/>
   </edges>
 </notation:Diagram>

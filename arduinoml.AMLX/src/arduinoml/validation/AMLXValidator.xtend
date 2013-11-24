@@ -6,11 +6,11 @@ package arduinoml.validation
 import org.eclipse.xtext.validation.Check
 import arduinoml.AMLMachine
 import arduinoml.TimeCondition
-import arduinoml.Comparison
 import arduinoml.AMLState
 import arduinoml.Transition
 import java.util.List
 import java.util.ArrayList
+import arduinoml.TimeComparison
 
 /**
  * Custom validation rules. 
@@ -25,19 +25,12 @@ class AMLXValidator extends AbstractAMLXValidator {
 			 warning("You better work bitch!!", m.eClass.getEStructuralFeature("start"));
 	}
 	
-	
-	@Check
-	def checkTimeConditionNotEqual(TimeCondition c) {
-		if (c.TComp == Comparison.EQUAL)
-			warning("Equality condition on time is highly unrecomended", c.eClass.getEStructuralFeature("tComp"));
-	}
-	
 	@Check
 	def checkSinkState(AMLState s) {
 		for(Transition t : s.transitions) {
 			if(t.conditions.forall[!TimeCondition.isInstance(it)])
 				return;
-			if(t.conditions.filter(TimeCondition).forall[it.TComp == Comparison::SUPERIOR])
+			if(t.conditions.filter(TimeCondition).forall[it.TComp == TimeComparison::^AFTER])
 				return;
 		}
 		if (s.transitions.empty) {

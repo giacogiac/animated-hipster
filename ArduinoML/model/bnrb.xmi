@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="ASCII"?>
-<arduinoml:Machine
-    xmi:version="2.0"
-    xmlns:xmi="http://www.omg.org/XMI"
-    xmlns:arduinoml="http://arduinoml/1.0"
-    start="//@states.0">
-  <states name="lol"/>
-</arduinoml:Machine>

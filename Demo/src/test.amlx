@@ -1,0 +1,10 @@
+frequency 12 Hz
+start buzz
+DigitalSensor button
+DigitalActuator buzzer
+State buzz:
+	set buzzer to ON
+	goto nobuzz if button is OFF
+State nobuzz:
+	set buzzer to OFF
+	goto buzz if button is ON
